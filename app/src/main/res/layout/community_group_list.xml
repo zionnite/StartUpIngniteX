@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="29dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/group_CardView"
+            android:backgroundTint="@color/colorWhite"
+
+    >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+        >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/com_linearLayout_1"
+            >
+                <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/logo_image"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:src="@drawable/user_profile"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@color/colorPrimary"
+                        android:paddingTop="10dp"
+                        android:layout_marginBottom="20dp"
+                />
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                >
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Title goes here"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:layout_marginTop="19dp"
+                            android:id="@+id/com_title"
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Username"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="normal"
+                            android:textSize="15sp"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/com_author"
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3hrs ago"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="italic|bold"
+                            android:textSize="15sp"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/com_time_ago"
+                    />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/com_content"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"
+
+                    android:ellipsize="end"
+                    android:maxLines="5"
+                    android:ems="3"
+                    android:lines="5"
+            />
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+            />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+            >
+                <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Join Community"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/round_shape"
+                        android:textColor="@color/colorWhite"
+                        android:padding="9dp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="4dp"
+                        android:id="@+id/community_join_btn"
+                />
+                <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UnJoin Community"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/round_shape"
+                        android:textColor="@color/colorWhite"
+                        android:padding="9dp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="4dp"
+                        android:id="@+id/community_unjoin_btn"
+                        android:visibility="gone"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/counter"
+                        android:text="0"
+                        android:textStyle="italic"
+                        android:layout_marginStart="10dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlack"
+
+                />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

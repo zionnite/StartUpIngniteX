@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_marginBottom="3dp"
+>
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/post_content_textCardView"
+                android:backgroundTint="@color/colorWhite"
+        >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+            >
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:id="@+id/com_linearLayout_1"
+                >
+                    <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/post_user_image"
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
+                            android:src="@drawable/user_profile"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="@color/colorPrimary"
+                            android:paddingTop="10dp"
+                            android:layout_marginBottom="20dp"
+                    />
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                    >
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Username"
+                                android:textColor="@color/colorBlack"
+                                android:textStyle="normal"
+                                android:textSize="15sp"
+                                android:layout_marginTop="19dp"
+                                android:id="@+id/post_author"
+                        />
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3hrs ago"
+                                android:textColor="@color/colorBlack"
+                                android:textStyle="italic|bold"
+                                android:textSize="15sp"
+                                android:layout_marginTop="5dp"
+                                android:id="@+id/post_time_ago"
+                        />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/post_content_text"
+                        android:padding="10dp"
+                        android:text="All couse coneten will come here to see if this ithing is acutally working the way "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp"
+                />
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/user_profile"
+                        android:id="@+id/post_content_image"
+                        android:visibility="gone"
+                />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                >
+                    <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/heart"
+                            android:tint="@color/colorPrimary"
+                            android:layout_marginBottom="14dp"
+                            android:layout_marginStart="5dp"
+                            android:id="@+id/post_like"
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5 Likes"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="italic|bold"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/counter"
+                    />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

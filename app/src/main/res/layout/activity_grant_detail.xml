@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Controller.GrantDetailActivity">
+
+    <ScrollView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollView"
+    >
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+        >
+
+
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="5dp"
+                    android:layout_marginTop="5dp"
+            >
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                >
+
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:orientation="vertical">
+
+                        <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/profile_icon"
+                                android:id="@+id/grant_image"
+                                android:scaleType="fitXY"
+                        />
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorPrimary"
+                    />
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Topic"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginStart="5dp"
+                            android:paddingStart="5dp"
+                            android:paddingTop="5dp"
+                            android:id="@+id/grant_topic"
+                            android:layout_marginTop="10dp"
+
+
+
+                    />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/grant_content"
+                            android:padding="10dp"
+                            android:text="Desc"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="18sp"
+                    />
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/upload_bussines_plan_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@drawable/upload"
+            android:tint="@color/colorWhite"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="10dp"
+            android:visibility="gone"
+
+    />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/upload_slide_deck_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@drawable/upload"
+            android:tint="@color/colorWhite"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:visibility="gone"
+    />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+    >
+        <ru.dimorinny.floatingtextbutton.FloatingTextButton
+                android:id="@+id/business_plan_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:floating_background_color="@color/colorPrimary"
+                app:floating_left_icon="@drawable/ic_file_upload_black_24dp"
+                app:floating_title="Business Plan"
+                app:floating_title_color="@android:color/white"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+        />
+        <ru.dimorinny.floatingtextbutton.FloatingTextButton
+                android:id="@+id/slide_deck_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:floating_background_color="@color/colorPrimary"
+                app:floating_left_icon="@drawable/ic_file_upload_black_24dp"
+                app:floating_title="Slide Deck"
+                app:floating_title_color="@android:color/white"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+        />
+    </LinearLayout>
+
+</RelativeLayout>

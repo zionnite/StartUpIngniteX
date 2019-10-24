@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/colorWhite"
+
+    >
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+        >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/event_first_row"
+            >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="Event Title"
+                        android:textColor="@color/colorWhite"
+                        android:layout_marginTop="45dp"
+                        android:id="@+id/event_title"
+
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/event_second_row"
+                    android:layout_below="@+id/event_first_row"
+            >
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                >
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date:"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:paddingStart="5dp"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="22-may-2019"
+                            android:textStyle="bold|italic"
+                            android:textColor="@color/colorBlack"
+                            android:paddingStart="9dp"
+                            android:id="@+id/event_date"
+
+                    />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                >
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time:"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:paddingStart="5dp"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10:00am"
+                            android:textStyle="bold|italic"
+                            android:textColor="@color/colorBlack"
+                            android:paddingStart="9dp"
+                            android:id="@+id/event_time"
+                            android:paddingTop="10dp"
+
+                    />
+
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="15dp"
+                >
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Descprition:"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:paddingStart="5dp"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="This is for the event description"
+                            android:textStyle="bold|italic"
+                            android:textColor="@color/colorBlack"
+                            android:paddingStart="9dp"
+                            android:id="@+id/event_desc"
+                            android:paddingTop="5dp"
+
+                    />
+
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginTop="15dp"
+                />
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                >
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                    >
+                        <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/heart"
+                                android:tint="@color/colorPrimary"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="5dp"
+                                android:id="@+id/event_like"
+                        />
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorBlack"
+                                android:text="5"
+                                android:textStyle="italic"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:id="@+id/event_counter"
+                        />
+                    </LinearLayout>
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginStart="15dp"
+                    >
+                        <TextView
+                                android:layout_width="75dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/heart"
+                                android:tint="@color/colorPrimary"
+                                android:layout_marginTop="5dp"
+                                android:text="Book"
+                                android:padding="5dp"
+                                android:gravity="center"
+                                android:textColor="@color/colorWhite"
+                                android:background="@drawable/round_white_primary_background"
+                                android:id="@+id/book_event"
+                                android:visibility="gone"
+                        />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+
+>
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    >
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:id="@+id/title_bar_LinearLayout"
+                android:background="@color/colorPrimary"
+        >
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Your Interest"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+            />
+
+        </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/first_row_menu"
+                    android:orientation="horizontal"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_below="@+id/title_bar_LinearLayout"
+            >
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/community_btn"
+                >
+                    <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/baseline_filter_vintage_black_18dp"
+                            android:background="@drawable/menu_border"
+                            android:scaleType="center"
+                            android:tint="@color/colorPrimary"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Comunity"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="30dp"
+                        android:id="@+id/ask_for__help"
+                >
+                    <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/baseline_chat_black_18dp"
+                            android:background="@drawable/menu_border"
+                            android:scaleType="center"
+                            android:tint="@color/colorPrimary"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ask for Help"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="30dp"
+                        android:id="@+id/business_listing_btn"
+                >
+                    <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/baseline_assignment_black_18dp"
+                            android:background="@drawable/menu_border"
+                            android:scaleType="center"
+                            android:tint="@color/colorPrimary"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Business"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Listing"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/second_row_menu"
+                    android:layout_below="@+id/first_row_menu"
+                    android:orientation="horizontal"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_gravity="center_horizontal"
+            >
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/event_btn"
+                >
+                    <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/baseline_event_black_18dp"
+                            android:background="@drawable/menu_border"
+                            android:tint="@color/colorPrimary"
+                            android:scaleType="center"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Event"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/resource_btn"
+                        android:layout_marginStart="30dp"
+                >
+                    <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/baseline_device_hub_black_18dp"
+                            android:background="@drawable/menu_border"
+                            android:scaleType="center"
+                            android:tint="@color/colorPrimary"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Resource"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Directory"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="30dp"
+                        android:id="@+id/coworking_btn"
+
+                >
+                    <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/baseline_group_work_black_18dp"
+                            android:background="@drawable/menu_border"
+                            android:scaleType="center"
+                            android:tint="@color/colorPrimary"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Coworking"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Space"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/third_row_menu"
+                    android:layout_below="@+id/second_row_menu"
+                    android:orientation="horizontal"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+            >
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/knowledge_btn"
+                >
+                    <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/baseline_menu_book_black_18dp"
+                            android:background="@drawable/menu_border"
+                            android:scaleType="center"
+                            android:tint="@color/colorPrimary"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Knowledge"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="center"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/webinars_btn"
+                        android:layout_marginStart="30dp"
+                >
+                    <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/baseline_play_circle_filled_black_18dp"
+                            android:background="@drawable/menu_border"
+                            android:tint="@color/colorPrimary"
+                            android:scaleType="center"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Webinars"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="30dp"
+                        android:id="@+id/startJob_btn"
+
+                >
+                    <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/baseline_business_center_black_18dp"
+                            android:background="@drawable/menu_border"
+                            android:scaleType="center"
+                            android:tint="@color/colorPrimary"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Startup Jobs"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/forth_row_menu"
+                    android:layout_below="@+id/third_row_menu"
+                    android:orientation="horizontal"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+            >
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/surveys_btn"
+                >
+                    <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/baseline_extension_black_18dp"
+                            android:background="@drawable/menu_border"
+                            android:scaleType="center"
+                            android:tint="@color/colorPrimary"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Surveys"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="center"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/toolkit_btn"
+                        android:layout_marginStart="30dp"
+                >
+                    <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/baseline_developer_board_black_18dp"
+                            android:background="@drawable/menu_border"
+                            android:tint="@color/colorPrimary"
+                            android:scaleType="center"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Toolkit"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="30dp"
+                        android:id="@+id/settings_btn"
+
+                >
+                    <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/baseline_settings_applications_black_18dp"
+                            android:background="@drawable/menu_border"
+                            android:scaleType="center"
+                            android:tint="@color/colorPrimary"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Settings"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fifth_row_menu"
+                    android:layout_below="@+id/forth_row_menu"
+                    android:orientation="horizontal"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+            >
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/freelancing_btn"
+                >
+                    <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/baseline_computer_black_18dp"
+                            android:background="@drawable/menu_border"
+                            android:scaleType="center"
+                            android:tint="@color/colorPrimary"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Freelancing"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="center"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/intenship_btn"
+                        android:layout_marginLeft="20dp"
+                >
+                    <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/baseline_supervisor_account_black_18dp"
+                            android:background="@drawable/menu_border"
+                            android:tint="@color/colorPrimary"
+                            android:scaleType="center"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Intership"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_gravity="center_horizontal"
+                    />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+
+
+</ScrollView>

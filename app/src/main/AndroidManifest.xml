@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="xyz.esuku.startupingnitex">
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <application
+            android:name=".MyApplication"
+            android:allowBackup="true"
+            android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+            android:hardwareAccelerated="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true"
+            tools:replace="android:appComponentFactory">
+        <activity android:name=".Controller.ViewUserProfile">
+        </activity>
+        <activity android:name=".Controller.UsersCategoryForm.Accelerator">
+        </activity>
+        <activity android:name=".Controller.UsersCategoryForm.Investors">
+        </activity>
+        <activity android:name=".Controller.UsersCategoryForm.GovermentAgency">
+        </activity>
+        <activity android:name=".Controller.UsersCategoryForm.Business">
+        </activity>
+        <activity android:name=".Controller.UsersCategoryForm.ServiceProvider">
+        </activity>
+        <activity android:name=".Controller.UsersCategoryForm.AspiringEntraprenuar">
+        </activity>
+
+        <service
+                android:name=".Services.UploadPdfService"
+                android:enabled="true"
+                android:exported="true">
+        </service>
+
+        <activity android:name=".Controller.GrantDetailActivity">
+        </activity>
+        <activity android:name=".Util.MyProgressDialog">
+        </activity>
+        <activity android:name=".Controller.ForumAskPost">
+        </activity>
+        <activity android:name=".Controller.GrantActivity">
+        </activity>
+        <activity android:name=".Controller.CommunityGroupActivity">
+        </activity>
+        <activity android:name=".Controller.IntenshipActivity">
+        </activity>
+        <activity android:name=".Controller.FreelanceActivity">
+        </activity>
+        <activity android:name=".Controller.SettingActivity">
+        </activity>
+        <activity android:name=".Controller.TookkitActivity">
+        </activity>
+        <activity android:name=".Controller.SurveyActivity">
+        </activity>
+        <activity android:name=".Controller.StartJobActivity">
+        </activity>
+        <activity android:name=".Controller.WebinarActivity">
+        </activity>
+        <activity android:name=".Controller.KnowledgeActivity">
+        </activity>
+        <activity android:name=".Controller.CoWorkingActivity">
+        </activity>
+        <activity android:name=".Controller.ResourceActivity">
+        </activity>
+        <activity android:name=".Controller.CommunityActivity">
+        </activity>
+        <activity android:name=".Controller.ProfileActivity">
+        </activity>
+        <activity android:name=".Controller.ForgetPasswordActivity">
+        </activity>
+        <activity android:name=".Controller.SignUpActivity">
+        </activity>
+        <activity android:name=".Controller.LoginActivity">
+
+        </activity>
+        <activity android:name=".Controller.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Controller.ForumDetailActivity">
+        </activity>
+        <activity android:name=".Controller.BussinessListActivity">
+        </activity>
+        <activity android:name=".Controller.BusinessCategoryActivity">
+        </activity>
+        <activity android:name=".Controller.EventActivity">
+        </activity>
+        <activity android:name=".Controller.Forum">
+        </activity>
+        <activity
+                android:name=".Controller.OnboardScreen"
+                android:label="@string/title_activity_onboard_screen"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".Controller.MainActivity">
+        </activity>
+    </application>
+
+</manifest>

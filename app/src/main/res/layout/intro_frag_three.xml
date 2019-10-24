@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/intro_frag_three"
+              android:background="@color/colorWhite"
+              android:orientation="vertical"
+              android:gravity="center"
+
+>
+    <ImageView
+            android:layout_width="315dp"
+            android:layout_height="315dp"
+            android:layout_gravity="center"
+            android:src="@drawable/start_c"
+            android:contentDescription="first_intro_fargment"
+    />
+
+
+<!--    <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Get Discount of 10% - 50% from all our Vendors world wide"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle=""-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--    />-->
+</LinearLayout>
+

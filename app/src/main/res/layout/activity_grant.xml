@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Controller.GrantActivity"
+>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    >
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_240sdp"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+        >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="14dp"
+                    android:paddingTop="20dp"
+            >
+                <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/left_arrow_icon"
+                        android:scaleType="centerCrop"
+                        android:tint="@color/colorWhite"
+                        android:layout_marginEnd="5dp"
+                        android:id="@+id/back_btn"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Grant Portal"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+
+                />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_320sdp"
+                android:layout_height="@dimen/_165sdp"
+                android:layout_marginTop="@dimen/_155sdp"
+                app:cardCornerRadius="9dp"
+                app:cardElevation="9dp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:id="@+id/grant_selector_cardview"
+
+        >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+            >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Grant"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:paddingStart="15dp"
+                        android:paddingTop="10dp"
+
+                />
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="5dp"
+
+                />
+
+
+                <org.angmarch.views.NiceSpinner
+                        android:id="@+id/grant_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Select Type"
+                />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_white_primary_background"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="Search"
+                        android:textColor="@color/colorWhite"
+                        android:layout_marginTop="10dp"
+                />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/selected_grant_title"
+                android:text=""
+                android:layout_below="@+id/grant_selector_cardview"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+        />
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/grant_recyclerView"
+                android:layout_below="@+id/selected_grant_title"
+
+                />
+    </RelativeLayout>
+</ScrollView>

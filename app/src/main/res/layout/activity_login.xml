@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Controller.LoginActivity"
+        android:background="@color/colorWhite"
+>
+
+
+    <ImageView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/start_up_logo"
+            android:id="@+id/Login_Logo_id"
+    />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="43dp"
+            android:layout_below="@id/Login_Logo_id"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/login_title"
+    />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/user_name_LinearLayout"
+            android:layout_below="@+id/login_title"
+            android:paddingTop="9dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+    >
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+        />
+        <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textStyle="italic"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/round_input_text"
+                android:layout_marginTop="5dp"
+                android:maxLines="1"
+                android:id="@+id/login_user_name"
+                android:paddingStart="5dp"
+        />
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorRed"
+                android:text="Username is Empty!"
+                android:paddingTop="5dp"
+                android:id="@+id/username_error"
+                android:visibility="gone"
+        />
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/password_LinearLayout"
+            android:layout_below="@+id/user_name_LinearLayout"
+            android:paddingTop="9dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+    >
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+        />
+
+        <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textStyle="italic"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/round_input_text"
+                android:layout_marginTop="5dp"
+                android:maxLines="1"
+                android:id="@+id/login_password"
+                android:paddingStart="5dp"
+        />
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorRed"
+                android:text="Password is Empty!"
+                android:paddingTop="5dp"
+                android:id="@+id/password_error"
+                android:visibility="gone"
+        />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:gravity="center"
+            android:layout_below="@+id/password_LinearLayout"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/round_shape"
+            android:id="@+id/login_btn"
+
+
+    />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:id="@+id/create_forgetLinaerLayout"
+            android:layout_below="@+id/login_btn"
+            android:gravity="bottom"
+    >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create an account"
+                android:id="@+id/create_account"
+                android:paddingStart="15dp"
+                android:paddingBottom="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlue"
+        />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Or"
+                android:paddingStart="15dp"
+                android:paddingBottom="5dp"
+                android:textSize="16sp"
+                android:layout_marginStart="5dp"
+
+        />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forget password"
+                android:id="@+id/forget_password"
+                android:paddingStart="15dp"
+                android:paddingBottom="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/colorRed"
+                android:layout_marginStart="5dp"
+
+        />
+    </LinearLayout>
+</RelativeLayout>

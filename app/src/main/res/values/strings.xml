@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ignite StartUpX</string>
+    <string name="title_activity_onboard_screen">OnboardScreen</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_create_ask_post">CreateAskPost</string>
+</resources>
