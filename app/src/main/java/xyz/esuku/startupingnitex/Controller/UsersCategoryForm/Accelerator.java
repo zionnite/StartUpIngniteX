@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.AppCompatEditText;
 import com.android.volley.*;
 import com.android.volley.toolbox.StringRequest;
@@ -32,11 +33,15 @@ public class Accelerator extends AppCompatActivity {
 
     AppCompatEditText business_name_text,business_address_text,service_rendering_text,work_email_text,work_phone_text;
 
-    TextView business_name_error,business_address_error,service_rendering_error,charges_error,specialty_error,work_email_error,work_phone_error,business_logo_error;
+    TextView business_name_error,business_address_error,service_rendering_error,charges_error,specialty_error,work_email_error,work_phone_error,
+            business_logo_error,platform_error;
 
     AppCompatButton select_business_log,Save;
 
     String selected_specialty =null;
+
+    AppCompatCheckBox platform_acceleration,platform_working_space,platform_hub;
+    String m_accelerate,m_working_space,m_hub;
 
     MyProgressDialog myProgressDialog;
     AppLinks appLinks = new AppLinks();
@@ -72,10 +77,53 @@ public class Accelerator extends AppCompatActivity {
         work_phone_text          = findViewById(R.id.work_phone_text);
         work_phone_error          = findViewById(R.id.work_phone_error);
 
+        platform_acceleration          = findViewById(R.id.platform_acceleration);
+        platform_working_space          = findViewById(R.id.platform_working_space);
+        platform_hub          = findViewById(R.id.platform_hub);
+        platform_error          = findViewById(R.id.platform_error);
+
+
 
 
         back_btn          = findViewById(R.id.back_btn);
         Save          = findViewById(R.id.Save);
+
+        platform_acceleration.setOnCheckedChangeListener((compoundButton, b) -> {
+
+            if (b){
+
+                m_accelerate   ="yes";
+
+            }else {
+
+                m_accelerate  ="no";
+
+            }
+        });
+        platform_working_space.setOnCheckedChangeListener((compoundButton, b) -> {
+
+            if (b){
+
+                m_working_space   ="yes";
+
+            }else {
+
+                m_working_space  ="no";
+
+            }
+        });
+        platform_hub.setOnCheckedChangeListener((compoundButton, b) -> {
+
+            if (b){
+
+                m_hub   ="yes";
+
+            }else {
+
+                m_hub  ="no";
+
+            }
+        });
 
         back_btn.setOnClickListener(v -> {
             Intent intent = new Intent(Accelerator.this, MainActivity.class);
@@ -133,17 +181,36 @@ public class Accelerator extends AppCompatActivity {
                 work_phone_error.setVisibility(View.GONE);
             }
 
+            if(m_accelerate == null || m_accelerate.equals("")){
+                m_accelerate = "no";
+            }
+            if(m_working_space == null || m_working_space.equals("")){
+                m_working_space = "no";
+            }
+            if(m_hub == null || m_hub.equals("")){
+                m_hub = "no";
+            }
+
+
+            if(m_accelerate == "no" && m_working_space =="no" && m_hub =="no"){
+                platform_error.setVisibility(View.VISIBLE);
+                return;
+            }else{
+                platform_error.setVisibility(View.GONE);
+            }
+
 
 
             if(!bussines_name.isEmpty() && !bussines_add.isEmpty() && !services.isEmpty() && !email.isEmpty() && !phone.isEmpty()){
-                update_profile_setting(bussines_name,bussines_add,services,email,phone);
+                update_profile_setting(bussines_name,bussines_add,services,email,phone,m_accelerate,m_working_space,m_hub);
             }
 
         });
 
     }
 
-    private void update_profile_setting(String bussines_name, String bussines_add, String services, String email, String phone) {
+    private void update_profile_setting(String full_name, String address, String services, String email, String phone,
+                                        String m_accelerate, String m_working_space, String m_hub) {
 
         myProgressDialog.setMessage("Updating ...");
 
@@ -215,11 +282,14 @@ public class Accelerator extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> postMap = new HashMap<>();
                 postMap.put("user_name", user_name);
-                postMap.put("business_name", bussines_name);
-                postMap.put("business_address", bussines_add);
-                postMap.put("services", services);
+                postMap.put("full_name", full_name);
+                postMap.put("address", address);
+                postMap.put("about_u", services);
                 postMap.put("email", email);
                 postMap.put("phone", phone);
+                postMap.put("accelerator", m_accelerate);
+                postMap.put("co_working_space", m_working_space);
+                postMap.put("hub", m_hub);
                 return postMap;
             }
         };

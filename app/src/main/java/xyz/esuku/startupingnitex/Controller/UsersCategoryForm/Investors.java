@@ -40,7 +40,8 @@ public class Investors extends AppCompatActivity {
 
     AppCompatCheckBox ideal,seed,post,series;
 
-    TextView business_name_error,business_address_error,service_rendering_error,charges_error,specialty_error,work_email_error,work_phone_error,business_logo_error;
+    TextView business_name_error,business_address_error,service_rendering_error,charges_error,specialty_error,work_email_error,work_phone_error,
+            business_logo_error,bus_level_error;
 
     AppCompatButton select_business_log,Save;
 
@@ -87,6 +88,7 @@ public class Investors extends AppCompatActivity {
         seed          = findViewById(R.id.seed);
         post          = findViewById(R.id.post);
         series          = findViewById(R.id.series);
+        bus_level_error          = findViewById(R.id.bus_level_error);
 
 
 
@@ -223,6 +225,12 @@ public class Investors extends AppCompatActivity {
                 m_series = "no";
             }
 
+            if(m_ideal_stage.equals("no") && m_seed_fund.equals("no") && m_post_seed.equals("no") && m_series.equals("no")){
+                bus_level_error.setVisibility(View.VISIBLE);
+                return;
+            }else{
+                bus_level_error.setVisibility(View.GONE);
+            }
 
             if(!bussines_name.isEmpty() && !bussines_add.isEmpty() && !services.isEmpty() && selected_specialty != null && !email.isEmpty() && !phone.isEmpty()){
                 update_profile_setting(bussines_name,bussines_add,services,selected_specialty,email,phone,m_ideal_stage,m_seed_fund,m_post_seed,m_series);

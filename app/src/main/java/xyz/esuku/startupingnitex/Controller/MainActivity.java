@@ -200,12 +200,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-//        if(service_status.equals("not_set")) {
-//
-//            popUpDialogPreference();
-//        }
+        if(service_status.equals("not_set")) {
 
-        popUpDialogPreference();
+            popUpDialogPreference();
+        }
+
     }
 
     public void popUpDialogPreference(){

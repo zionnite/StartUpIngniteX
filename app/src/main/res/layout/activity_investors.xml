@@ -273,6 +273,16 @@
                         app:theme="@style/CheckBoxTheme"
                 />
 
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:text="One of the List must be Selected!"
+                        android:paddingTop="5dp"
+                        android:id="@+id/bus_level_error"
+                        android:visibility="gone"
+                />
+
 
             </LinearLayout>
 
@@ -345,6 +355,8 @@
                         android:maxLines="1"
                         android:id="@+id/work_phone_text"
                         android:paddingStart="5dp"
+                        android:digits="0123456789"
+                        android:inputType="phone"
                 />
                 <TextView
                         android:layout_width="match_parent"

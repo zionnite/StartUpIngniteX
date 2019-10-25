@@ -54,4 +54,8 @@ public class AppLinks {
     public String insert_to_group_post     = BASE_URL+"insert_to_group_post";
     public String group_post_like_toggle     = BASE_URL+"group_post_like_toggle";
 
+
+    public String get_works_space_n_accelerator_n_hub_list     = BASE_URL+"get_works_space_n_accelerator_n_hub_list";
+    public String post_works_space_n_accelerator_n_hub_list     = BASE_URL+"post_works_space_n_accelerator_n_hub_list";
+
 }
