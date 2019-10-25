@@ -5,11 +5,14 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.util.Log;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.AppCompatEditText;
 import com.android.volley.*;
 import com.android.volley.toolbox.StringRequest;
@@ -35,6 +38,8 @@ public class Investors extends AppCompatActivity {
 
     AppCompatEditText business_name_text,business_address_text,service_rendering_text,work_email_text,work_phone_text;
 
+    AppCompatCheckBox ideal,seed,post,series;
+
     TextView business_name_error,business_address_error,service_rendering_error,charges_error,specialty_error,work_email_error,work_phone_error,business_logo_error;
 
     AppCompatButton select_business_log,Save;
@@ -45,6 +50,8 @@ public class Investors extends AppCompatActivity {
     AppLinks appLinks = new AppLinks();
     private UserDb_Helper userDb_helper;
     String user_name;
+
+    String m_ideal_stage,m_seed_fund,m_post_seed,m_series;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +83,11 @@ public class Investors extends AppCompatActivity {
         work_phone_text          = findViewById(R.id.work_phone_text);
         work_phone_error          = findViewById(R.id.work_phone_error);
 
+        ideal          = findViewById(R.id.ideal);
+        seed          = findViewById(R.id.seed);
+        post          = findViewById(R.id.post);
+        series          = findViewById(R.id.series);
+
 
 
         back_btn          = findViewById(R.id.back_btn);
@@ -95,6 +107,54 @@ public class Investors extends AppCompatActivity {
             Log.d("Grant ID", String.valueOf(id)+" POSITION "+String.valueOf(position)+ "NAME "+item);
         });
 
+        ideal.setOnCheckedChangeListener((compoundButton, b) -> {
+
+            if (b){
+
+                m_ideal_stage   ="yes";
+
+            }else {
+
+                m_ideal_stage  ="no";
+
+            }
+        });
+        seed.setOnCheckedChangeListener((compoundButton, b) -> {
+
+            if (b){
+
+                m_seed_fund   ="yes";
+
+            }else {
+
+                m_seed_fund  ="no";
+
+            }
+        });
+        post.setOnCheckedChangeListener((compoundButton, b) -> {
+
+            if (b){
+
+                m_post_seed   ="yes";
+
+            }else {
+
+                m_post_seed  ="no";
+
+            }
+        });
+        series.setOnCheckedChangeListener((compoundButton, b) -> {
+
+            if (b){
+
+                m_series   ="yes";
+
+            }else {
+
+                m_series  ="no";
+
+            }
+        });
 
 
         Save.setOnClickListener(v -> {
@@ -150,18 +210,28 @@ public class Investors extends AppCompatActivity {
 
 
 
+            if(m_ideal_stage == null || m_ideal_stage.equals("")){
+                m_ideal_stage = "no";
+            }
+            if(m_ideal_stage != null){
+
+                
+                specialty_error.setVisibility(View.GONE);
+            }
+
             if(!bussines_name.isEmpty() && !bussines_add.isEmpty() && !services.isEmpty() && selected_specialty != null && !email.isEmpty() && !phone.isEmpty()){
-                update_profile_setting(bussines_name,bussines_add,services,selected_specialty,email,phone);
+                update_profile_setting(bussines_name,bussines_add,services,selected_specialty,email,phone,m_ideal_stage,m_seed_fund,m_post_seed,m_series);
             }
 
         });
 
 
-        get_list_of_department();
+        get_list_of_investor_interest_list();
 
     }
 
-    private void update_profile_setting(String bussines_name, String bussines_add, String services, String selected_specialty, String email, String phone) {
+    private void update_profile_setting(String full_name, String bussines_add, String services, String selected_specialty, String email,
+                                        String phone,String ideal_stage, String seed_fund, String post_seed, String series_a) {
 
         myProgressDialog.setMessage("Updating ...");
 
@@ -233,12 +303,19 @@ public class Investors extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> postMap = new HashMap<>();
                 postMap.put("user_name", user_name);
-                postMap.put("business_name", bussines_name);
+                postMap.put("full_name", full_name);
                 postMap.put("business_address", bussines_add);
                 postMap.put("services", services);
                 postMap.put("interest", selected_specialty);
                 postMap.put("email", email);
                 postMap.put("phone", phone);
+
+                postMap.put("ideal_stage", ideal_stage);
+                postMap.put("seed_fund", seed_fund);
+                postMap.put("post_seed", post_seed);
+                postMap.put("series_stage", series_a);
+
+
                 return postMap;
             }
         };
@@ -251,7 +328,7 @@ public class Investors extends AppCompatActivity {
     }
 
 
-    private void get_list_of_department(){
+    private void get_list_of_investor_interest_list(){
         myProgressDialog.setMessage("Please wait...");
 
         String requestUrl = appLinks.get_investor_interest_list;

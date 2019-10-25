@@ -2,7 +2,7 @@ package xyz.esuku.startupingnitex.Util;
 
 public class AppLinks {
 
-    public String BASE_URL      ="https://startup.joons-me.com/Api/";
+    public String BASE_URL      ="http://start.ignitestartupx.org/Api/";
 
 
     public String login_user    =BASE_URL+"post_login";
@@ -13,9 +13,10 @@ public class AppLinks {
     public String get_apiring_entraprenuar_interest_list      =BASE_URL+"get_apiring_entraprenuar_interest_list";
     public String update_already_existing_business      =BASE_URL+"update_already_existing_business";
     public String service_provider      =BASE_URL+"service_provider";
-    public String get_business_specialty      =BASE_URL+"get_business_specialty";
+    public String get_business_industry      =BASE_URL+"get_business_industry";
     public String goverment_agency      =BASE_URL+"goverment_agency";
-    public String get_list_department_types      =BASE_URL+"get_list_department_types";
+    public String get_goverment_department_list      =BASE_URL+"get_goverment_department_list";
+    public String get_goverment_category_list      =BASE_URL+"get_goverment_category_list";
     public String get_investor_interest_list      =BASE_URL+"get_investor_interest_list";
     public String update_investor_profile      =BASE_URL+"update_investor_profile";
     public String update_accelerator_profile      =BASE_URL+"update_accelerator_profile";

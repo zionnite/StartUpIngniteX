@@ -213,7 +213,7 @@ public class AspiringEntraprenuar extends AppCompatActivity {
 
 
             if(!bussines_name.isEmpty() && !expertise.isEmpty() && !interest.isEmpty() && !week_to_start.isEmpty()
-                    && !previous_exp.isEmpty() && !email.isEmpty() && !phone.isEmpty() && !full_name.isEmpty() && !city.isEmpty()){
+                    && !previous_exp.isEmpty() && !email.isEmpty() && !phone.isEmpty() && !full_name.isEmpty() && !city.isEmpty() && mentor !=null){
 
                 update_profile_setting(bussines_name,expertise,interest,week_to_start,previous_exp,email,phone,full_name, city, mentor);
 

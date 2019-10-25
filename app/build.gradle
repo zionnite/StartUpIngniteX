@@ -78,6 +78,7 @@ dependencies {
 
     implementation 'com.github.HBiSoft:PickiT:0.1.7'
     implementation 'com.github.AppIntro:AppIntro:4.2.3'
+    implementation 'com.riyagayasen.android:easyaccordion:1.0.3'
 
 
 }

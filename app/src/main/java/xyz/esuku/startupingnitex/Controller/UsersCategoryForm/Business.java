@@ -12,6 +12,7 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
@@ -20,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatRadioButton;
 import androidx.core.app.ActivityCompat;
 import com.android.volley.*;
 import com.android.volley.toolbox.JsonArrayRequest;
@@ -51,9 +53,9 @@ public class Business extends AppCompatActivity {
     NiceSpinner specialty_spinner;
     List<String> dataset;
 
-    AppCompatEditText business_name_text,business_address_text,service_rendering_text,charges_text,work_email_text,work_phone_text;
+    AppCompatEditText business_name_text,business_address_text,service_rendering_text,work_email_text,work_phone_text;
 
-    TextView business_name_error,business_address_error,service_rendering_error,charges_error,specialty_error,work_email_error,work_phone_error,business_logo_error;
+    TextView business_name_error,business_address_error,service_rendering_error,specialty_error,work_email_error,work_phone_error,business_logo_error, bus_type_error;
 
     AppCompatButton select_business_log,Save;
 
@@ -67,6 +69,9 @@ public class Business extends AppCompatActivity {
 
     private final int CODE_GALLERY_REQUEST = 999;
     Bitmap bitmap;
+
+    RadioGroup bus_type_radioGroup;
+    AppCompatRadioButton busTypeRadioButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,8 +92,7 @@ public class Business extends AppCompatActivity {
         service_rendering_text          = findViewById(R.id.service_rendering_text);
         service_rendering_error          = findViewById(R.id.service_rendering_error);
 
-        charges_text          = findViewById(R.id.charges_text);
-        charges_error          = findViewById(R.id.charges_error);
+
 
         specialty_spinner          = findViewById(R.id.specialty_spinner);
         specialty_error          = findViewById(R.id.specialty_error);
@@ -98,6 +102,9 @@ public class Business extends AppCompatActivity {
 
         work_phone_text          = findViewById(R.id.work_phone_text);
         work_phone_error          = findViewById(R.id.work_phone_error);
+
+        bus_type_radioGroup          = findViewById(R.id.bus_type_radioGroup);
+        bus_type_error          = findViewById(R.id.bus_type_error);
 
         select_business_log          = findViewById(R.id.select_business_log);
         business_logo_error          = findViewById(R.id.business_logo_error);
@@ -154,20 +161,7 @@ public class Business extends AppCompatActivity {
                 service_rendering_error.setVisibility(View.GONE);
             }
 
-            String charges         = charges_text.getText().toString().trim();
-            if(charges.isEmpty() || charges.equals("")){
-                charges_error.setVisibility(View.VISIBLE);
-            }
-            if(!charges.isEmpty()){
-                service_rendering_error.setVisibility(View.GONE);
-            }
 
-            if(selected_specialty == null || selected_specialty.equals("")){
-                specialty_error.setVisibility(View.VISIBLE);
-            }
-            if(selected_specialty != null){
-                specialty_error.setVisibility(View.GONE);
-            }
 
             String email         = work_email_text.getText().toString().trim();
             if(email.isEmpty() || email.equals("")){
@@ -185,8 +179,15 @@ public class Business extends AppCompatActivity {
                 work_phone_error.setVisibility(View.GONE);
             }
 
+            String industry         = selected_specialty;
+            if(industry == null || industry.equals("")){
+                specialty_error.setVisibility(View.VISIBLE);
+            }
+            if(industry !=null){
+                specialty_error.setVisibility(View.GONE);
+            }
 
-            logo    = imageToString(bitmap);
+
             if(logo == null || logo.equals("")){
                 business_logo_error.setVisibility(View.VISIBLE);
             }
@@ -194,8 +195,22 @@ public class Business extends AppCompatActivity {
                 business_logo_error.setVisibility(View.GONE);
             }
 
-            if(!bussines_name.isEmpty() && !bussines_add.isEmpty() && !services.isEmpty() && !charges.isEmpty() && selected_specialty != null && !email.isEmpty() && !phone.isEmpty() && logo != null){
-                update_s(bussines_name,bussines_add,services,charges,selected_specialty,email,phone,logo);
+
+            int selectedBus  = bus_type_radioGroup.getCheckedRadioButtonId();
+            busTypeRadioButton  = findViewById(selectedBus);
+            String  bus_type = null;
+
+
+            if(busTypeRadioButton == null || busTypeRadioButton.equals("")){
+                bus_type_error.setVisibility(View.VISIBLE);
+            }
+            if(busTypeRadioButton !=null){
+                bus_type_error.setVisibility(View.GONE);
+                bus_type      = busTypeRadioButton.getText().toString().trim();
+            }
+
+            if(!bussines_name.isEmpty() && !bussines_add.isEmpty() && !services.isEmpty()  && !email.isEmpty() && !phone.isEmpty() && logo != null && bus_type !=null && industry !=null){
+                update_s(bussines_name,bussines_add,services,email,phone,logo, bus_type, industry);
             }
 
         });
@@ -204,7 +219,7 @@ public class Business extends AppCompatActivity {
     }
 
 
-    public void update_s(String bussines_name, String bussines_add, String services, String charges, String selected_specialty, String email, String phone, String logo) {
+    public void update_s(String bussines_name, String bussines_add, String services, String email, String phone, String logo, String bus_type, String industry) {
 
         myProgressDialog.setMessage("Updating, wait...");
 
@@ -216,11 +231,11 @@ public class Business extends AppCompatActivity {
         postMap.put("bussines_name", bussines_name);
         postMap.put("business_address", bussines_add);
         postMap.put("services", services);
-        postMap.put("charges", charges);
-        postMap.put("specialty", selected_specialty);
+        postMap.put("industry", industry);
         postMap.put("logo", logo);
         postMap.put("email", email);
         postMap.put("phone", phone);
+        postMap.put("bus_type", bus_type);
 
         JsonObjectRequest req = new JsonObjectRequest(requestUrl, new JSONObject(postMap),
                 response -> {
@@ -329,7 +344,7 @@ public class Business extends AppCompatActivity {
                 bitmap = BitmapFactory.decodeStream(inputStream);
                 //prof_imageName.setImageBitmap(bitmap);
                 if(bitmap !=null){
-
+                    logo    = imageToString(bitmap);
                 }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -353,7 +368,7 @@ public class Business extends AppCompatActivity {
     private void get_list_of_specialty(){
         myProgressDialog.setMessage("Please wait...");
 
-        String requestUrl = appLinks.get_business_specialty;
+        String requestUrl = appLinks.get_business_industry;
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, requestUrl, new Response.Listener<String>() {
             @Override

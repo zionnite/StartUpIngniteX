@@ -53,7 +53,7 @@
             <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Government Agency"
+                    android:text="Government Institutions"
                     android:textColor="@color/colorWhite"
                     android:background="@color/colorPrimary"
                     android:layout_marginBottom="2dp"

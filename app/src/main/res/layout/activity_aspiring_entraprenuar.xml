@@ -322,7 +322,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:id="@+id/work_email"
-                        android:layout_below="@+id/name_of_contact"
+                        android:layout_below="@+id/previous_experience"
                         android:paddingTop="9dp"
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"

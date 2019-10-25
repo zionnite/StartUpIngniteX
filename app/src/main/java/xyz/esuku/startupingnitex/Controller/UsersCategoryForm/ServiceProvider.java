@@ -43,16 +43,14 @@ import java.util.*;
 public class ServiceProvider extends AppCompatActivity {
     ImageView back_btn;
 
-    NiceSpinner specialty_spinner;
-    List<String> dataset;
 
-    AppCompatEditText business_name_text,business_address_text,service_rendering_text,charges_text,work_email_text,work_phone_text;
+    AppCompatEditText business_name_text,business_address_text,service_rendering_text,charges_text, prod_name_text,charges_2_text, prod_name_2_text,charges_3_text, prod_name_3_text,charges_4_text,
+            prod_name_4_text,charges_5_text, prod_name_5_text, work_email_text,work_phone_text;
 
-    TextView business_name_error,business_address_error,service_rendering_error,charges_error,specialty_error,work_email_error,work_phone_error,business_logo_error;
+    TextView business_name_error,business_address_error,service_rendering_error,prod_one_error,work_email_error,work_phone_error,business_logo_error;
 
     AppCompatButton select_business_log,Save;
 
-    String selected_specialty =null;
     String logo =null;
 
     MyProgressDialog myProgressDialog;
@@ -83,10 +81,23 @@ public class ServiceProvider extends AppCompatActivity {
         service_rendering_error          = findViewById(R.id.service_rendering_error);
 
         charges_text          = findViewById(R.id.charges_text);
-        charges_error          = findViewById(R.id.charges_error);
+        prod_name_text          = findViewById(R.id.prod_name_text);
+        prod_one_error          = findViewById(R.id.prod_one_error);
 
-        specialty_spinner          = findViewById(R.id.specialty_spinner);
-        specialty_error          = findViewById(R.id.specialty_error);
+
+        charges_2_text          = findViewById(R.id.charges_2_text);
+        prod_name_2_text          = findViewById(R.id.prod_name_2_text);
+
+        charges_3_text          = findViewById(R.id.charges_3_text);
+        prod_name_3_text          = findViewById(R.id.prod_name_3_text);
+
+        charges_4_text          = findViewById(R.id.charges_4_text);
+        prod_name_4_text          = findViewById(R.id.prod_name_4_text);
+
+        charges_5_text          = findViewById(R.id.charges_5_text);
+        prod_name_5_text          = findViewById(R.id.prod_name_5_text);
+
+
 
         work_email_text          = findViewById(R.id.work_email_text);
         work_email_error          = findViewById(R.id.work_email_error);
@@ -106,13 +117,7 @@ public class ServiceProvider extends AppCompatActivity {
             finish();
         });
 
-        specialty_spinner.setOnSpinnerItemSelectedListener((parent, view, position, id) -> {
 
-            String item = String.valueOf(parent.getItemAtPosition(position));
-            //Toast.makeText(GrantActivity.this, item, Toast.LENGTH_SHORT).show();
-            selected_specialty  = item;
-            Log.d("Grant ID", String.valueOf(id)+" POSITION "+String.valueOf(position)+ "NAME "+item);
-        });
 
         select_business_log.setOnClickListener(v -> {
 
@@ -149,19 +154,60 @@ public class ServiceProvider extends AppCompatActivity {
                 service_rendering_error.setVisibility(View.GONE);
             }
 
-            String charges         = charges_text.getText().toString().trim();
-            if(charges.isEmpty() || charges.equals("")){
-                charges_error.setVisibility(View.VISIBLE);
+
+            String prod_1         = prod_name_text.getText().toString().trim();
+            if(prod_1.isEmpty() || prod_1.equals("")){
+                prod_one_error.setVisibility(View.VISIBLE);
             }
-            if(!charges.isEmpty()){
-                service_rendering_error.setVisibility(View.GONE);
+            if(!prod_1.isEmpty()){
+                prod_one_error.setVisibility(View.GONE);
             }
 
-            if(selected_specialty == null || selected_specialty.equals("")){
-                specialty_error.setVisibility(View.VISIBLE);
+            String charges         = charges_text.getText().toString().trim();
+            if(charges.isEmpty() || charges.equals("")){
+                prod_one_error.setVisibility(View.VISIBLE);
             }
-            if(selected_specialty != null){
-                specialty_error.setVisibility(View.GONE);
+            if(!charges.isEmpty()){
+                prod_one_error.setVisibility(View.GONE);
+            }
+
+
+
+            //charges 2
+            String prod_2   = prod_name_2_text.getText().toString().trim();
+            if(prod_2.isEmpty()){
+                prod_2  ="null";
+            }
+            String charges_2    = charges_2_text.getText().toString().trim();
+            if(charges_2.isEmpty()){
+                charges_2  ="null";
+            }
+            //charges 3
+            String prod_3   = prod_name_3_text.getText().toString().trim();
+            if(prod_3.isEmpty()){
+                prod_3  ="null";
+            }
+            String charges_3    = charges_3_text.getText().toString().trim();
+            if(charges_3.isEmpty()){
+                charges_3  ="null";
+            }
+            //charges 4
+            String prod_4   = prod_name_4_text.getText().toString().trim();
+            if(prod_4.isEmpty()){
+                prod_4  ="null";
+            }
+            String charges_4    = charges_4_text.getText().toString().trim();
+            if(charges_4.isEmpty()){
+                charges_4  ="null";
+            }
+            //charges 5
+            String prod_5   = prod_name_5_text.getText().toString().trim();
+            if(prod_2.isEmpty()){
+                prod_5  ="null";
+            }
+            String charges_5    = charges_5_text.getText().toString().trim();
+            if(charges_5.isEmpty()){
+                charges_5  ="null";
             }
 
             String email         = work_email_text.getText().toString().trim();
@@ -181,7 +227,7 @@ public class ServiceProvider extends AppCompatActivity {
             }
 
 
-            logo    = imageToString(bitmap);
+            //logo    = imageToString(bitmap);
             if(logo == null || logo.equals("")){
                 business_logo_error.setVisibility(View.VISIBLE);
             }
@@ -189,16 +235,16 @@ public class ServiceProvider extends AppCompatActivity {
                 business_logo_error.setVisibility(View.GONE);
             }
 
-            if(!bussines_name.isEmpty() && !bussines_add.isEmpty() && !services.isEmpty() && !charges.isEmpty() && selected_specialty != null && !email.isEmpty() && !phone.isEmpty() && logo != null){
-                update_s(bussines_name,bussines_add,services,charges,selected_specialty,email,phone,logo);
+            if(!bussines_name.isEmpty() && !bussines_add.isEmpty() && !services.isEmpty() && !charges.isEmpty() && !prod_1.isEmpty() && !email.isEmpty() && !phone.isEmpty() && logo != null){
+                update_s(bussines_name,bussines_add,services,email,phone,logo,prod_1,charges,prod_2,charges_2,prod_3,charges_3,prod_4,charges_4,prod_5,charges_5);
             }
 
         });
 
-        get_list_of_specialty();
     }
 
-    public void update_s(String bussines_name, String bussines_add, String services, String charges, String selected_specialty, String email, String phone, String logo) {
+    public void update_s(String bussines_name, String bussines_add, String services, String email, String phone, String logo,
+                         String prod_1,String charges_1,String prod_2,String charges_2,String prod_3,String charges_3,String prod_4,String charges_4,String prod_5,String charges_5) {
 
         myProgressDialog.setMessage("Updating, wait...");
 
@@ -210,11 +256,24 @@ public class ServiceProvider extends AppCompatActivity {
         postMap.put("bussines_name", bussines_name);
         postMap.put("business_address", bussines_add);
         postMap.put("services", services);
-        postMap.put("charges", charges);
-        postMap.put("specialty", selected_specialty);
         postMap.put("logo", logo);
         postMap.put("email", email);
         postMap.put("phone", phone);
+
+        postMap.put("prod_one", prod_1);
+        postMap.put("charges_one", charges_1);
+
+        postMap.put("prod_two", prod_2);
+        postMap.put("charges_two", charges_2);
+
+        postMap.put("prod_three", prod_3);
+        postMap.put("charges_three", charges_3);
+
+        postMap.put("prod_four", prod_4);
+        postMap.put("charges_four", charges_4);
+
+        postMap.put("prod_five", prod_5);
+        postMap.put("charges_five", charges_5);
 
         JsonObjectRequest req = new JsonObjectRequest(requestUrl, new JSONObject(postMap),
                 response -> {
@@ -323,7 +382,7 @@ public class ServiceProvider extends AppCompatActivity {
                 bitmap = BitmapFactory.decodeStream(inputStream);
                 //prof_imageName.setImageBitmap(bitmap);
                 if(bitmap !=null){
-
+                    logo    = imageToString(bitmap);
                 }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -344,72 +403,4 @@ public class ServiceProvider extends AppCompatActivity {
         return encodedImage;
     }
 
-    private void get_list_of_specialty(){
-        myProgressDialog.setMessage("Please wait...");
-
-        String requestUrl = appLinks.get_business_specialty;
-
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, requestUrl, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-
-                Log.e("login",response.toString());
-
-                myProgressDialog.dismiss();
-                try {
-                    JSONObject result = new JSONObject(response);
-
-                    String status   = result.getString("status");
-                    String msg      = result.getString("msg");
-                    if(status.equals("fail")){
-
-                        final AlertDialog.Builder alertDialg  = new AlertDialog.Builder(ServiceProvider.this);
-                        alertDialg.setTitle("Oops!");
-                        alertDialg.setMessage(msg);
-                        alertDialg.show();
-                    }else if(status.equals("success")){
-                        List<String> arrayList = new ArrayList<>();
-                        arrayList.add("Select");
-
-                        JSONArray detailArry   = result.getJSONArray("detail");
-                        for(int i=0; i < detailArry.length(); i++){
-                            JSONObject detailObj = detailArry.getJSONObject(i);
-
-                            String specialty_name        = detailObj.getString("specialty_name");
-                            arrayList.add(specialty_name);
-                        }
-
-
-                        dataset = new LinkedList<>(arrayList);
-                        specialty_spinner.attachDataSource(dataset);
-
-                    }
-
-                } catch (JSONException e) {
-                    myProgressDialog.dismiss();
-                    e.printStackTrace();
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                error.printStackTrace(); //log the error resulting from the request for diagnosis/debugging
-                myProgressDialog.dismiss();
-            }
-        }) {
-
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> postMap = new HashMap<>();
-                postMap.put("user_name", user_name);
-                return postMap;
-            }
-        };
-        //make the request to your server as indicated in your request url
-        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
-                16 * 1000,
-                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-        MyApplication.getInstance().addToRequestQueue(stringRequest);
-    }
 }
