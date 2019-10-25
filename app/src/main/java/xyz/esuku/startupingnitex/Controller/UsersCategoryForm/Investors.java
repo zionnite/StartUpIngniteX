@@ -228,6 +228,8 @@ public class Investors extends AppCompatActivity {
 
         get_list_of_investor_interest_list();
 
+
+
     }
 
     private void update_profile_setting(String full_name, String bussines_add, String services, String selected_specialty, String email,
