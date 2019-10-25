@@ -233,53 +233,53 @@ public class GrantActivity extends AppCompatActivity implements GrantItemClickLi
     }
     private void getGrantCategory() {
 
-            HashMap<String, String> user = userDbHelper.getUserDetails();
-            String user_name    = user.get("user_name");
+        HashMap<String, String> user = userDbHelper.getUserDetails();
+        String user_name    = user.get("user_name");
 
-            String requestUrl = appLinks.get_grant_category;
-            JsonArrayRequest request = new JsonArrayRequest(requestUrl,
-                    response -> {
-                        if (response == null) {
-                            Toast.makeText(getApplicationContext(), "Couldn't fetch the data from Server! Pleas try again.", Toast.LENGTH_LONG).show();
-                            return;
+        String requestUrl = appLinks.get_grant_category;
+        JsonArrayRequest request = new JsonArrayRequest(requestUrl,
+                response -> {
+                    if (response == null) {
+                        Toast.makeText(getApplicationContext(), "Couldn't fetch the data from Server! Pleas try again.", Toast.LENGTH_LONG).show();
+                        return;
+                    }
+
+                    List<String> arrayList = new ArrayList<>();
+                    String first_category_name  ="All Grant Type";
+                    arrayList.add(first_category_name);
+
+                    for (int i=0; i < response.length(); i++) {
+
+                        try {
+                            JSONObject detailObj = response.getJSONObject(i);
+                            int grant_cat_id        = detailObj.getInt("grant_cat_id");
+                            String grant_cat_name        = detailObj.getString("grant_cat_name");
+                            arrayList.add(grant_cat_name);
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
 
-                        List<String> arrayList = new ArrayList<>();
-                        String first_category_name  ="All Grant Type";
-                        arrayList.add(first_category_name);
 
-                        for (int i=0; i < response.length(); i++) {
+                    }
+                    dataset = new LinkedList<>(arrayList);
+                    niceSpinner.attachDataSource(dataset);
 
-                            try {
-                                JSONObject detailObj = response.getJSONObject(i);
-                                int grant_cat_id        = detailObj.getInt("grant_cat_id");
-                                String grant_cat_name        = detailObj.getString("grant_cat_name");
-                                arrayList.add(grant_cat_name);
+                }, error -> {
+            // error in getting
+            Toast.makeText(getApplicationContext(), "Error: " + error.toString(), Toast.LENGTH_SHORT).show();
+            Log.e("BusinessListing",error.toString());
 
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
+        });
 
 
-                        }
-                        dataset = new LinkedList<>(arrayList);
-                        niceSpinner.attachDataSource(dataset);
+        request.setRetryPolicy(new DefaultRetryPolicy(
+                16 * 1000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 
-                    }, error -> {
-                        // error in getting
-                        Toast.makeText(getApplicationContext(), "Error: " + error.toString(), Toast.LENGTH_SHORT).show();
-                        Log.e("BusinessListing",error.toString());
-
-                    });
-
-
-            request.setRetryPolicy(new DefaultRetryPolicy(
-                    16 * 1000,
-                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-
-            MyApplication.getInstance().addToRequestQueue(request);
-        }
+        MyApplication.getInstance().addToRequestQueue(request);
+    }
 
     @Override
     public void onItemClicked(GrantModel grantModel, int position) {
