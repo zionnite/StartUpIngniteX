@@ -213,11 +213,16 @@ public class Investors extends AppCompatActivity {
             if(m_ideal_stage == null || m_ideal_stage.equals("")){
                 m_ideal_stage = "no";
             }
-            if(m_ideal_stage != null){
-
-                
-                specialty_error.setVisibility(View.GONE);
+            if(m_seed_fund == null || m_seed_fund.equals("")){
+                m_seed_fund = "no";
             }
+            if(m_post_seed == null || m_post_seed.equals("")){
+                m_post_seed = "no";
+            }
+            if(m_series == null || m_series.equals("")){
+                m_series = "no";
+            }
+
 
             if(!bussines_name.isEmpty() && !bussines_add.isEmpty() && !services.isEmpty() && selected_specialty != null && !email.isEmpty() && !phone.isEmpty()){
                 update_profile_setting(bussines_name,bussines_add,services,selected_specialty,email,phone,m_ideal_stage,m_seed_fund,m_post_seed,m_series);
