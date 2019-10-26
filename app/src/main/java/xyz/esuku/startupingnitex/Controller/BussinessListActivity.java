@@ -229,7 +229,7 @@ public class BussinessListActivity extends AppCompatActivity implements Business
             @Override
             public void onErrorResponse(VolleyError error) {
                 // error in getting
-                Toast.makeText(getApplicationContext(), "Error: " + error.toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "No Data Found or Check your Internet", Toast.LENGTH_SHORT).show();
                 Log.e("BusinessListing",error.toString());
 
             }

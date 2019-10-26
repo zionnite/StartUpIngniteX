@@ -212,11 +212,11 @@ public class CommunityActivity extends AppCompatActivity implements CommunityIte
                         Log.v("PCom", check[0]);
 
                         if(s.equals("success")){
-                            Toast.makeText(CommunityActivity.this, msg[0], Toast.LENGTH_LONG).show();
+                            //Toast.makeText(CommunityActivity.this, msg[0], Toast.LENGTH_LONG).show();
                             communityAdapter.update_item(position,g_id[0],count[0],check[0]);
                         }
                         else if(s.equals("fail")){
-                            Toast.makeText(CommunityActivity.this, msg[0], Toast.LENGTH_LONG).show();
+                            //Toast.makeText(CommunityActivity.this, msg[0], Toast.LENGTH_LONG).show();
                         }
 
 

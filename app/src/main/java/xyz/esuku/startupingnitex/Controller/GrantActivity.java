@@ -218,7 +218,7 @@ public class GrantActivity extends AppCompatActivity implements GrantItemClickLi
 
                 }, error -> {
                     // error in getting
-                    Toast.makeText(getApplicationContext(), "Error: " + error.toString(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "No Data Found or Check your Internet", Toast.LENGTH_SHORT).show();
                     myProgressDialog.dismiss();
 
                 });
@@ -267,7 +267,7 @@ public class GrantActivity extends AppCompatActivity implements GrantItemClickLi
 
                 }, error -> {
             // error in getting
-            Toast.makeText(getApplicationContext(), "Error: " + error.toString(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "No Data Found or Check your Internet", Toast.LENGTH_SHORT).show();
             Log.e("BusinessListing",error.toString());
 
         });

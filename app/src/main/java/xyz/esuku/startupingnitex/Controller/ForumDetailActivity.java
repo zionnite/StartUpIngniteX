@@ -630,7 +630,7 @@ public class ForumDetailActivity extends AppCompatActivity{
             // error in getting
             myProgressDialog.dismiss();
             Log.e("Post", error.toString());
-            Toast.makeText(getApplicationContext(), "Error: " + error.toString(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "No Data Found or Check your Internet", Toast.LENGTH_SHORT).show();
 
 
         });
