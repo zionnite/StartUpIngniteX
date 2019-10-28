@@ -37,7 +37,7 @@ public class CoWorkingActivity extends AppCompatActivity {
     }
 
 //    private void getGrantByCategory(String item) {
-//        String requestUrl = appLinks.get_grant_by_category;
+//        String requestUrl = appLinks.get_accelerator_wort_by_category;
 //
 //
 //
