@@ -57,7 +57,7 @@
                 app:cardElevation="9dp"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
-                android:id="@+id/grant_selector_cardview"
+                android:id="@+id/selector_cardview"
 
         >
 
@@ -115,9 +115,9 @@
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/selected_grant_title"
+                android:id="@+id/selected_category"
                 android:text=""
-                android:layout_below="@+id/grant_selector_cardview"
+                android:layout_below="@+id/selector_cardview"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:padding="10dp"
@@ -127,8 +127,8 @@
         <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/grant_recyclerView"
-                android:layout_below="@+id/selected_grant_title"
+                android:id="@+id/coWorking_recyclerView"
+                android:layout_below="@+id/selected_category"
 
         />
     </RelativeLayout>

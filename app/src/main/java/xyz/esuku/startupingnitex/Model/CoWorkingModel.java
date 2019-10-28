@@ -6,6 +6,9 @@ public class CoWorkingModel {
     @SerializedName("id")
     String id;
 
+    @SerializedName("user_name")
+    String user_name;
+
     @SerializedName("full_name")
     String full_name;
 
@@ -24,14 +27,38 @@ public class CoWorkingModel {
     @SerializedName("category")
     String category;
 
-    public CoWorkingModel(String id, String full_name, String address, String desc, String email, String phone, String category) {
+    @SerializedName("country")
+    String country;
+
+    @SerializedName("state")
+    String state;
+
+    @SerializedName("city")
+    String city;
+
+    public CoWorkingModel(String id, String user_name, String full_name, String address, String desc, String email, String phone, String category) {
         this.id = id;
+        this.full_name = full_name;
+        this.user_name = user_name;
+        this.address = address;
+        this.desc = desc;
+        this.email = email;
+        this.phone = phone;
+        this.category = category;
+    }
+
+    public CoWorkingModel(String id, String user_name, String full_name, String address, String desc, String email, String phone, String category, String country, String state, String city) {
+        this.id = id;
+        this.user_name = user_name;
         this.full_name = full_name;
         this.address = address;
         this.desc = desc;
         this.email = email;
         this.phone = phone;
         this.category = category;
+        this.country = country;
+        this.state = state;
+        this.city = city;
     }
 
     public String getId() {
@@ -40,6 +67,14 @@ public class CoWorkingModel {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getUser_name() {
+        return user_name;
+    }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
     public String getFull_name() {
@@ -88,5 +123,29 @@ public class CoWorkingModel {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }
