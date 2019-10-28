@@ -51,13 +51,14 @@
 
         <androidx.cardview.widget.CardView
                 android:layout_width="@dimen/_320sdp"
-                android:layout_height="@dimen/_165sdp"
-                android:layout_marginTop="@dimen/_155sdp"
+                android:layout_height="@dimen/_205sdp"
+                android:layout_marginTop="@dimen/_125sdp"
                 app:cardCornerRadius="9dp"
                 app:cardElevation="9dp"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:id="@+id/selector_cardview"
+                android:paddingBottom="0dp"
 
         >
 
@@ -90,13 +91,32 @@
                 />
 
 
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                >
+                    <org.angmarch.views.NiceSpinner
+                            android:id="@+id/select_country"
+                            android:layout_width="@dimen/_130sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:hint="Select Country"
+                    />
+                    <org.angmarch.views.NiceSpinner
+                            android:id="@+id/select_state"
+                            android:layout_width="@dimen/_130sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:hint="Select State"
+                    />
+
+                </LinearLayout>
+
                 <org.angmarch.views.NiceSpinner
-                        android:id="@+id/accelerator_spinner"
+                        android:id="@+id/select_category"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Select Type"
                 />
-
 
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -108,6 +128,7 @@
                         android:text="Search"
                         android:textColor="@color/colorWhite"
                         android:layout_marginTop="10dp"
+                        android:layout_marginBottom="0dp"
                 />
             </LinearLayout>
         </androidx.cardview.widget.CardView>

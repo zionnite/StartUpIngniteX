@@ -8,6 +8,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.RecyclerView;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import de.hdodenhof.circleimageview.CircleImageView;
 import xyz.esuku.startupingnitex.ItemClicked.CoWorkingItemClickListener;
 import xyz.esuku.startupingnitex.Model.CoWorkingModel;
 import xyz.esuku.startupingnitex.R;
@@ -35,6 +38,44 @@ public class CoWorkingAdapter extends RecyclerView.Adapter<CoWorkingAdapter.MyVi
     @Override
     public void onBindViewHolder(@NonNull CoWorkingAdapter.MyViewHolder holder, int position) {
 
+        String accelerator  =workingModelList.get(position).getAccelerator();
+        String co_work_space  =workingModelList.get(position).getCo_working_space();
+        String hub  =workingModelList.get(position).getHub();
+
+        holder.co_working_desc.setText(workingModelList.get(position).getDesc());
+        holder.co_working_address.setText(workingModelList.get(position).getAddress());
+        holder.co_working_phone.setText(workingModelList.get(position).getPhone());
+        holder.co_working_email.setText(workingModelList.get(position).getEmail());
+        holder.co_working_user_name.setText(workingModelList.get(position).getUser_name());
+        holder.co_working_full_name.setText(workingModelList.get(position).getFull_name());
+        RequestOptions options = new RequestOptions()
+                .centerCrop()
+                .placeholder(R.drawable.content_loader_placeholder)
+                .error(R.drawable.content_loader_placeholder);
+        Glide.with(context).load(workingModelList.get(position).getUser_img()).apply(options).into(holder.co_working_userprofile);
+
+        if(accelerator.equals("yes") && co_work_space.equals("no") && hub.equals("no")){
+            holder.co_working_title.setText("Accelerator");
+        }
+
+        else if(accelerator.equals("no") && co_work_space.equals("yes") && hub.equals("no")){
+            holder.co_working_title.setText("Co-Working Space");
+        }
+        else if(accelerator.equals("no") && co_work_space.equals("no") && hub.equals("yes")){
+            holder.co_working_title.setText("Hub");
+        }
+        else if(accelerator.equals("yes") && co_work_space.equals("yes") && hub.equals("no")){
+            holder.co_working_title.setText("Accelerator & Co-Working Space");
+        }
+        else if(accelerator.equals("yes") && co_work_space.equals("no") && hub.equals("yes")){
+            holder.co_working_title.setText("Accelerator & Hub");
+        }
+        else if(accelerator.equals("no") && co_work_space.equals("yes") && hub.equals("yes")){
+            holder.co_working_title.setText("Co-Working Space & Hub");
+        }
+        else if(accelerator.equals("yes") && co_work_space.equals("yes") && hub.equals("yes")){
+            holder.co_working_title.setText("Accelerator, Co-Working Space & Hub");
+        }
 
     }
 
@@ -45,10 +86,11 @@ public class CoWorkingAdapter extends RecyclerView.Adapter<CoWorkingAdapter.MyVi
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView co_working_title,co_working_desc,co_working_address,co_working_phone,co_working_email,co_working_country_state_city,co_working_userprofile,
+        TextView co_working_title,co_working_desc,co_working_address,co_working_phone,co_working_email,co_working_country_state_city,
                 co_working_user_name,co_working_full_name;
 
         AppCompatButton co_working_view_profile;
+        CircleImageView co_working_userprofile;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);

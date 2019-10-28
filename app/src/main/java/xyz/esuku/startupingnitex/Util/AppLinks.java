@@ -55,6 +55,10 @@ public class AppLinks {
     public String group_post_like_toggle     = BASE_URL+"group_post_like_toggle";
 
 
+    public String get_country_list     = BASE_URL+"get_country_list";
+    public String get_state_list     = BASE_URL+"get_state_list";
+    public String get_accelerator_category     = BASE_URL+"get_accelerator_category";
+    public String get_slected_accelerator_category     = BASE_URL+"get_slected_accelerator_category";
     public String get_works_space_n_accelerator_n_hub_list     = BASE_URL+"get_works_space_n_accelerator_n_hub_list";
     public String post_works_space_n_accelerator_n_hub_list     = BASE_URL+"post_works_space_n_accelerator_n_hub_list";
 

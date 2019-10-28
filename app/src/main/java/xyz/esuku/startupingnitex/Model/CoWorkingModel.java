@@ -9,6 +9,9 @@ public class CoWorkingModel {
     @SerializedName("user_name")
     String user_name;
 
+    @SerializedName("user_img")
+    String user_img;
+
     @SerializedName("full_name")
     String full_name;
 
@@ -24,8 +27,14 @@ public class CoWorkingModel {
     @SerializedName("phone")
     String phone;
 
-    @SerializedName("category")
-    String category;
+    @SerializedName("accelerator")
+    String accelerator;
+
+    @SerializedName("co_working_space")
+    String co_working_space;
+
+    @SerializedName("hub")
+    String hub;
 
     @SerializedName("country")
     String country;
@@ -36,26 +45,33 @@ public class CoWorkingModel {
     @SerializedName("city")
     String city;
 
-    public CoWorkingModel(String id, String user_name, String full_name, String address, String desc, String email, String phone, String category) {
+    public CoWorkingModel(String id, String user_name, String user_img, String full_name, String address, String desc, String email, String phone,
+                          String accelerator, String co_working_space, String hub) {
         this.id = id;
-        this.full_name = full_name;
         this.user_name = user_name;
+        this.user_img = user_img;
+        this.full_name = full_name;
         this.address = address;
         this.desc = desc;
         this.email = email;
         this.phone = phone;
-        this.category = category;
+        this.accelerator = accelerator;
+        this.co_working_space = co_working_space;
+        this.hub = hub;
     }
 
-    public CoWorkingModel(String id, String user_name, String full_name, String address, String desc, String email, String phone, String category, String country, String state, String city) {
+    public CoWorkingModel(String id, String user_name, String user_img, String full_name, String address, String desc, String email, String phone, String accelerator, String co_working_space, String hub, String country, String state, String city) {
         this.id = id;
         this.user_name = user_name;
+        this.user_img = user_img;
         this.full_name = full_name;
         this.address = address;
         this.desc = desc;
         this.email = email;
         this.phone = phone;
-        this.category = category;
+        this.accelerator = accelerator;
+        this.co_working_space = co_working_space;
+        this.hub = hub;
         this.country = country;
         this.state = state;
         this.city = city;
@@ -75,6 +91,14 @@ public class CoWorkingModel {
 
     public void setUser_name(String user_name) {
         this.user_name = user_name;
+    }
+
+    public String getUser_img() {
+        return user_img;
+    }
+
+    public void setUser_img(String user_img) {
+        this.user_img = user_img;
     }
 
     public String getFull_name() {
@@ -117,12 +141,28 @@ public class CoWorkingModel {
         this.phone = phone;
     }
 
-    public String getCategory() {
-        return category;
+    public String getAccelerator() {
+        return accelerator;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setAccelerator(String accelerator) {
+        this.accelerator = accelerator;
+    }
+
+    public String getCo_working_space() {
+        return co_working_space;
+    }
+
+    public void setCo_working_space(String co_working_space) {
+        this.co_working_space = co_working_space;
+    }
+
+    public String getHub() {
+        return hub;
+    }
+
+    public void setHub(String hub) {
+        this.hub = hub;
     }
 
     public String getCountry() {
