@@ -77,9 +77,22 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/toobar_LinearLayout"
     >
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Back To Job Listing"
+                android:gravity="center"
+                android:textColor="@color/colorRed"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:id="@+id/goBack"
+                android:visibility="gone"
+        />
         <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/goBack"
         >
             <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"

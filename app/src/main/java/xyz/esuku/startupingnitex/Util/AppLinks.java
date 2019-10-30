@@ -60,6 +60,10 @@ public class AppLinks {
     public String get_accelerator_category     = BASE_URL+"get_accelerator_category";
     public String get_slected_accelerator_category     = BASE_URL+"get_slected_accelerator_category";
     public String get_works_space_n_accelerator_n_hub_list     = BASE_URL+"get_works_space_n_accelerator_n_hub_list";
-    public String post_works_space_n_accelerator_n_hub_list     = BASE_URL+"post_works_space_n_accelerator_n_hub_list";
+
+
+    public String search_job_listing     = BASE_URL+"search_job_listing";
+    public String get_jop_listing     = BASE_URL+"get_jop_listing";
+    public String post_job     = BASE_URL+"post_job";
 
 }

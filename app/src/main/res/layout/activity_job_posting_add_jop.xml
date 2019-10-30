@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Controller.JobPostingAddJop">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toobar_LinearLayout"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="10dp"
+
+    >
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/left_arrow_icon"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="0dp"
+                android:tint="@color/colorWhite"
+                android:id="@+id/back_btn"
+
+
+
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginEnd="9dp"
+                android:layout_gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/search_box"
+
+
+
+
+
+
+                android:paddingHorizontal="10dp"
+                android:text="Post Job"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+
+                android:layout_toRightOf="@+id/back_btn"
+                android:layout_toLeftOf="@+id/add_job"
+
+        />
+    </RelativeLayout>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toobar_LinearLayout"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+    >
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+        >
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="7dp"
+                    app:cardElevation="2dp"
+            >
+                <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_input_text"
+                        android:inputType="text"
+                        android:hint="Job Title"
+                        android:textColorHint="@color/colorBlack"
+                        android:paddingLeft="3dp"
+                        android:id="@+id/job_title_text"
+                />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:text="Job title is empty!"
+                        android:paddingTop="5dp"
+                        android:id="@+id/job_title_error"
+                        android:visibility="gone"
+                />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="7dp"
+                    app:cardElevation="2dp"
+            >
+                <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_input_text"
+                        android:inputType="text"
+                        android:hint="Description"
+                        android:textColorHint="@color/colorBlack"
+                        android:paddingLeft="3dp"
+                        android:id="@+id/job_desc_text"
+                />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:text="Description is empty!"
+                        android:paddingTop="5dp"
+                        android:id="@+id/job_desc_error"
+                        android:visibility="gone"
+                />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="7dp"
+                    app:cardElevation="2dp"
+            >
+                <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_input_text"
+                        android:inputType="text"
+                        android:hint="Company Name"
+                        android:textColorHint="@color/colorBlack"
+                        android:paddingLeft="3dp"
+                        android:id="@+id/job_company_text"
+                />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:text="Company name is empty!"
+                        android:paddingTop="5dp"
+                        android:id="@+id/job_company_error"
+                        android:visibility="gone"
+                />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="7dp"
+                    app:cardElevation="2dp"
+            >
+                <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_input_text"
+                        android:inputType="text"
+                        android:hint="Job Location"
+                        android:textColorHint="@color/colorBlack"
+                        android:paddingLeft="3dp"
+                        android:id="@+id/job_location_text"
+                />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:text="Job loaction is empty!"
+                        android:paddingTop="5dp"
+                        android:id="@+id/job_location_error"
+                        android:visibility="gone"
+                />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="7dp"
+                    app:cardElevation="2dp"
+            >
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                >
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Can this job be done remotely?"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="1dp"
+                    />
+                    <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/job_remote_radioGroup"
+                    >
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/remote_yes"
+                                android:text="Yes"
+                                android:layout_margin="16dp"
+                                app:theme="@style/RadioButtonTheme"
+                                android:checked="false"/>
+
+
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/remote_no"
+                                android:text="No"
+                                android:layout_margin="16dp"
+                                app:theme="@style/RadioButtonTheme"
+                                android:checked="false"
+
+                        />
+
+
+
+
+
+                    </RadioGroup>
+                </LinearLayout>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:text="Option not selected!"
+                        android:paddingTop="5dp"
+                        android:id="@+id/job_remote_error"
+                        android:visibility="gone"
+                />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    app:cardElevation="2dp"
+            >
+                <org.angmarch.views.NiceSpinner
+                        android:id="@+id/job_category_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Select Category"
+                />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:text="Category not selected!"
+                        android:paddingTop="5dp"
+                        android:id="@+id/job_category_error"
+                        android:visibility="gone"
+                />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    app:cardElevation="2dp"
+            >
+                <org.angmarch.views.NiceSpinner
+                        android:id="@+id/job_experience_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Select work experience"
+                />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:text="Experience not selected!"
+                        android:paddingTop="5dp"
+                        android:id="@+id/job_experience_error"
+                        android:visibility="gone"
+                />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    app:cardElevation="2dp"
+            >
+                <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_input_text"
+                        android:inputType="text"
+                        android:hint="Compensation"
+                        android:textColorHint="@color/colorBlack"
+                        android:paddingLeft="3dp"
+                        android:id="@+id/job_compensation_text"
+                />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:text="Compensation is empty!"
+                        android:paddingTop="5dp"
+                        android:id="@+id/job_compensation_error"
+                        android:visibility="gone"
+                />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round_white_primary_background"
+                    android:text="POST"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/make_post"
+            />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
