@@ -66,7 +66,7 @@
         </activity>
         <activity android:name=".Controller.SurveyActivity">
         </activity>
-        <activity android:name=".Controller.StartJobActivity">
+        <activity android:name=".Controller.JobPostingActivity">
         </activity>
         <activity android:name=".Controller.WebinarActivity">
         </activity>

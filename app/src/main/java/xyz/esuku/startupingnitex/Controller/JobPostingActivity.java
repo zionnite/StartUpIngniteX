@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import xyz.esuku.startupingnitex.R;
 
-public class StartJobActivity extends AppCompatActivity {
+public class JobPostingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
