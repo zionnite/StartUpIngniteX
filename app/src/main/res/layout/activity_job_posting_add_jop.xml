@@ -76,25 +76,32 @@
                     android:layout_marginTop="7dp"
                     app:cardElevation="2dp"
             >
-                <androidx.appcompat.widget.AppCompatEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:background="@drawable/round_input_text"
-                        android:inputType="text"
-                        android:hint="Job Title"
-                        android:textColorHint="@color/colorBlack"
-                        android:paddingLeft="3dp"
-                        android:id="@+id/job_title_text"
-                />
-                <TextView
+                <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/colorRed"
-                        android:text="Job title is empty!"
-                        android:paddingTop="5dp"
-                        android:id="@+id/job_title_error"
-                        android:visibility="gone"
-                />
+                        android:orientation="vertical"
+                >
+                    <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/round_input_text"
+                            android:inputType="text"
+                            android:hint="Job Title"
+                            android:textColorHint="@color/colorBlack"
+                            android:paddingLeft="3dp"
+                            android:id="@+id/job_title_text"
+                    />
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorRed"
+                            android:text="Job title is empty!"
+                            android:paddingTop="5dp"
+                            android:id="@+id/job_title_error"
+                            android:visibility="gone"
+                    />
+                </LinearLayout>
+
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -103,25 +110,32 @@
                     android:layout_marginTop="7dp"
                     app:cardElevation="2dp"
             >
-                <androidx.appcompat.widget.AppCompatEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:background="@drawable/round_input_text"
-                        android:inputType="text"
-                        android:hint="Description"
-                        android:textColorHint="@color/colorBlack"
-                        android:paddingLeft="3dp"
-                        android:id="@+id/job_desc_text"
-                />
-                <TextView
+                <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/colorRed"
-                        android:text="Description is empty!"
-                        android:paddingTop="5dp"
-                        android:id="@+id/job_desc_error"
-                        android:visibility="gone"
-                />
+                        android:orientation="vertical"
+                >
+                    <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/round_input_text"
+                            android:inputType="text"
+                            android:hint="Description"
+                            android:textColorHint="@color/colorBlack"
+                            android:paddingLeft="3dp"
+                            android:id="@+id/job_desc_text"
+                    />
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorRed"
+                            android:text="Description is empty!"
+                            android:paddingTop="5dp"
+                            android:id="@+id/job_desc_error"
+                            android:visibility="gone"
+                    />
+                </LinearLayout>
+
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -130,25 +144,33 @@
                     android:layout_marginTop="7dp"
                     app:cardElevation="2dp"
             >
-                <androidx.appcompat.widget.AppCompatEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:background="@drawable/round_input_text"
-                        android:inputType="text"
-                        android:hint="Company Name"
-                        android:textColorHint="@color/colorBlack"
-                        android:paddingLeft="3dp"
-                        android:id="@+id/job_company_text"
-                />
-                <TextView
+                <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/colorRed"
-                        android:text="Company name is empty!"
-                        android:paddingTop="5dp"
-                        android:id="@+id/job_company_error"
-                        android:visibility="gone"
-                />
+                        android:orientation="vertical"
+                >
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/round_input_text"
+                            android:inputType="text"
+                            android:hint="Company Name"
+                            android:textColorHint="@color/colorBlack"
+                            android:paddingLeft="3dp"
+                            android:id="@+id/job_company_text"
+                    />
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorRed"
+                            android:text="Company name is empty!"
+                            android:paddingTop="5dp"
+                            android:id="@+id/job_company_error"
+                            android:visibility="gone"
+                    />
+                </LinearLayout>
+
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -157,25 +179,33 @@
                     android:layout_marginTop="7dp"
                     app:cardElevation="2dp"
             >
-                <androidx.appcompat.widget.AppCompatEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:background="@drawable/round_input_text"
-                        android:inputType="text"
-                        android:hint="Job Location"
-                        android:textColorHint="@color/colorBlack"
-                        android:paddingLeft="3dp"
-                        android:id="@+id/job_location_text"
-                />
-                <TextView
+                <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/colorRed"
-                        android:text="Job loaction is empty!"
-                        android:paddingTop="5dp"
-                        android:id="@+id/job_location_error"
-                        android:visibility="gone"
-                />
+                        android:orientation="vertical"
+                >
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/round_input_text"
+                            android:inputType="text"
+                            android:hint="Job Location"
+                            android:textColorHint="@color/colorBlack"
+                            android:paddingLeft="3dp"
+                            android:id="@+id/job_location_text"
+                    />
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorRed"
+                            android:text="Job location is empty!"
+                            android:paddingTop="5dp"
+                            android:id="@+id/job_location_error"
+                            android:visibility="gone"
+                    />
+                </LinearLayout>
+
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -230,40 +260,17 @@
 
 
                     </RadioGroup>
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorRed"
+                            android:text="Option not selected!"
+                            android:paddingTop="5dp"
+                            android:id="@+id/job_remote_error"
+                            android:visibility="gone"
+                    />
                 </LinearLayout>
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorRed"
-                        android:text="Option not selected!"
-                        android:paddingTop="5dp"
-                        android:id="@+id/job_remote_error"
-                        android:visibility="gone"
-                />
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginTop="2dp"
-                    app:cardElevation="2dp"
-            >
-                <org.angmarch.views.NiceSpinner
-                        android:id="@+id/job_category_spinner"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Select Category"
-                />
 
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorRed"
-                        android:text="Category not selected!"
-                        android:paddingTop="5dp"
-                        android:id="@+id/job_category_error"
-                        android:visibility="gone"
-                />
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -272,22 +279,30 @@
                     android:layout_marginTop="2dp"
                     app:cardElevation="2dp"
             >
-                <org.angmarch.views.NiceSpinner
-                        android:id="@+id/job_experience_spinner"
+                <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Select work experience"
-                />
+                        android:orientation="vertical"
+                >
+                    <org.angmarch.views.NiceSpinner
+                            android:id="@+id/job_category_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Select Category"
+                    />
 
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorRed"
-                        android:text="Experience not selected!"
-                        android:paddingTop="5dp"
-                        android:id="@+id/job_experience_error"
-                        android:visibility="gone"
-                />
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorRed"
+                            android:text="Category not selected!"
+                            android:paddingTop="5dp"
+                            android:id="@+id/job_category_error"
+                            android:visibility="gone"
+                    />
+
+                </LinearLayout>
+
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -296,25 +311,63 @@
                     android:layout_marginTop="2dp"
                     app:cardElevation="2dp"
             >
-                <androidx.appcompat.widget.AppCompatEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:background="@drawable/round_input_text"
-                        android:inputType="text"
-                        android:hint="Compensation"
-                        android:textColorHint="@color/colorBlack"
-                        android:paddingLeft="3dp"
-                        android:id="@+id/job_compensation_text"
-                />
-                <TextView
+                <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/colorRed"
-                        android:text="Compensation is empty!"
-                        android:paddingTop="5dp"
-                        android:id="@+id/job_compensation_error"
-                        android:visibility="gone"
-                />
+                        android:orientation="vertical"
+                >
+                    <org.angmarch.views.NiceSpinner
+                            android:id="@+id/job_experience_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Select work experience"
+                    />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorRed"
+                            android:text="Experience not selected!"
+                            android:paddingTop="5dp"
+                            android:id="@+id/job_experience_error"
+                            android:visibility="gone"
+                    />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    app:cardElevation="2dp"
+            >
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                >
+                    <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/round_input_text"
+                            android:inputType="text"
+                            android:hint="Compensation"
+                            android:textColorHint="@color/colorBlack"
+                            android:paddingLeft="3dp"
+                            android:id="@+id/job_compensation_text"
+                    />
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorRed"
+                            android:text="Compensation is empty!"
+                            android:paddingTop="5dp"
+                            android:id="@+id/job_compensation_error"
+                            android:visibility="gone"
+                    />
+                </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <androidx.appcompat.widget.AppCompatButton

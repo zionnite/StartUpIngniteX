@@ -2,24 +2,49 @@ package xyz.esuku.startupingnitex.Model;
 
 public class JopPostingModel {
 
+    String id;
+    String job_poster;
     String job_title;
     String job_desc;
     String job_company;
     String job_location;
-    String job_remotely;
+    String job_remote;
     String job_category;
     String job_experience;
     String job_compensation;
+    String time;
+    String date;
 
-    public JopPostingModel(String job_title, String job_desc, String job_company, String job_location, String job_remotely, String job_category, String job_experience, String job_compensation) {
+
+    public JopPostingModel(String id, String job_poster, String job_title, String job_desc, String job_company, String job_location, String job_remote, String job_category, String job_experience, String job_compensation, String time, String date) {
+        this.id = id;
+        this.job_poster = job_poster;
         this.job_title = job_title;
         this.job_desc = job_desc;
         this.job_company = job_company;
         this.job_location = job_location;
-        this.job_remotely = job_remotely;
+        this.job_remote = job_remote;
         this.job_category = job_category;
         this.job_experience = job_experience;
         this.job_compensation = job_compensation;
+        this.time = time;
+        this.date = date;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getJob_poster() {
+        return job_poster;
+    }
+
+    public void setJob_poster(String job_poster) {
+        this.job_poster = job_poster;
     }
 
     public String getJob_title() {
@@ -54,12 +79,12 @@ public class JopPostingModel {
         this.job_location = job_location;
     }
 
-    public String getJob_remotely() {
-        return job_remotely;
+    public String getJob_remote() {
+        return job_remote;
     }
 
-    public void setJob_remotely(String job_remotely) {
-        this.job_remotely = job_remotely;
+    public void setJob_remote(String job_remote) {
+        this.job_remote = job_remote;
     }
 
     public String getJob_category() {
@@ -84,5 +109,21 @@ public class JopPostingModel {
 
     public void setJob_compensation(String job_compensation) {
         this.job_compensation = job_compensation;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

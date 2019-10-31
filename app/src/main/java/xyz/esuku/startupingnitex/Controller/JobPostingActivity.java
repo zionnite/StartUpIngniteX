@@ -147,16 +147,21 @@ public class JobPostingActivity extends AppCompatActivity implements JopPostingI
 
                             JSONObject detailObj = detail.getJSONObject(i);
 
+                            String job_id        = detailObj.getString("id");
+                            String job_poster        = detailObj.getString("job_poster");
                             String job_title     = detailObj.getString("job_title");
                             String job_desc     = detailObj.getString("job_desc");
                             String job_company     = detailObj.getString("job_company");
                             String job_location     = detailObj.getString("job_location");
-                            String job_remotely     = detailObj.getString("job_remotely");
+                            String job_remotely     = detailObj.getString("job_remote");
                             String job_category     = detailObj.getString("job_category");
                             String job_experience     = detailObj.getString("job_experience");
                             String job_compensation     = detailObj.getString("job_compensation");
+                            String job_time     = detailObj.getString("time");
+                            String job_date     = detailObj.getString("date");
 
-                            listingModels.add(new JopPostingModel(job_title,job_desc,job_company,job_location,job_remotely,job_category,job_experience,job_compensation));
+                            listingModels.add(new JopPostingModel(job_id,job_poster,job_title,job_desc,job_company,job_location,job_remotely,job_category,job_experience,
+                                    job_compensation,job_time,job_date));
                         }
 
 
@@ -199,11 +204,14 @@ public class JobPostingActivity extends AppCompatActivity implements JopPostingI
         if (!searching){
             goBack.setVisibility(View.GONE);
         }
+
+        myProgressDialog.setMessage("Please wait ...");
         String requestUrl = appLinks.get_jop_listing;
         JsonArrayRequest request = new JsonArrayRequest(requestUrl,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
+                        myProgressDialog.dismiss();
                         Log.d("BusinessListing",response.toString());
                         if (response == null) {
                             Toast.makeText(getApplicationContext(), "Couldn't fetch the data from Server! Pleas try again.", Toast.LENGTH_LONG).show();
@@ -225,6 +233,7 @@ public class JobPostingActivity extends AppCompatActivity implements JopPostingI
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                myProgressDialog.dismiss();
                 // error in getting
                 Toast.makeText(getApplicationContext(), "No Data Found or Check your Internet", Toast.LENGTH_SHORT).show();
                 Log.e("BusinessListing",error.toString());
