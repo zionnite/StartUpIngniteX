@@ -252,5 +252,17 @@ public class JobPostingActivity extends AppCompatActivity implements JopPostingI
     @Override
     public void onClick(JopPostingModel model) {
 
+        Intent intent = new Intent(JobPostingActivity.this, JobPostingDetail.class);
+        intent.putExtra("job_poster",model.getJob_poster());
+        intent.putExtra("job_id",model.getId());
+        intent.putExtra("job_title",model.getJob_title());
+        intent.putExtra("job_comp",model.getJob_company());
+        intent.putExtra("job_desc",model.getJob_desc());
+        intent.putExtra("job_cat",model.getJob_category());
+        intent.putExtra("job_compensate",model.getJob_compensation());
+        intent.putExtra("job_exp",model.getJob_experience());
+        intent.putExtra("job_remote",model.getJob_remote());
+        intent.putExtra("job_location",model.getJob_location());
+        startActivity(intent);
     }
 }
