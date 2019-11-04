@@ -66,5 +66,6 @@ public class AppLinks {
     public String get_jop_listing     = BASE_URL+"get_jop_listing";
     public String get_job_listing_category     = BASE_URL+"get_job_listing_category";
     public String submit_job     = BASE_URL+"submit_job";
+    public String apply_job     = BASE_URL+"apply_job";
 
 }

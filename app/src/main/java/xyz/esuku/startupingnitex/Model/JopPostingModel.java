@@ -14,9 +14,10 @@ public class JopPostingModel {
     String job_compensation;
     String time;
     String date;
+    String job_status;
 
 
-    public JopPostingModel(String id, String job_poster, String job_title, String job_desc, String job_company, String job_location, String job_remote, String job_category, String job_experience, String job_compensation, String time, String date) {
+    public JopPostingModel(String id, String job_poster, String job_title, String job_desc, String job_company, String job_location, String job_remote, String job_category, String job_experience, String job_compensation, String time, String date, String job_status) {
         this.id = id;
         this.job_poster = job_poster;
         this.job_title = job_title;
@@ -29,6 +30,8 @@ public class JopPostingModel {
         this.job_compensation = job_compensation;
         this.time = time;
         this.date = date;
+        this.job_status = job_status;
+
     }
 
     public String getId() {
@@ -125,5 +128,13 @@ public class JopPostingModel {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getJob_status() {
+        return job_status;
+    }
+
+    public void setJob_status(String job_status) {
+        this.job_status = job_status;
     }
 }
