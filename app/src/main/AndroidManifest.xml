@@ -25,6 +25,16 @@
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true"
             tools:replace="android:appComponentFactory">
+        <activity android:name=".Controller.Settings.About">
+        </activity>
+        <activity android:name=".Controller.Settings.Help">
+        </activity>
+        <activity android:name=".Controller.Settings.ChangePassword">
+        </activity>
+        <activity android:name=".Controller.Settings.Contact">
+        </activity>
+        <activity android:name=".Controller.Settings.Notification">
+        </activity>
         <activity android:name=".Controller.UsersCategoryForm.InternActivity">
         </activity>
         <activity android:name=".Controller.JobPostingDetail">

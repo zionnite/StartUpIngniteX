@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,4 +7,208 @@
         android:layout_height="match_parent"
         tools:context=".Controller.SettingActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+        >
+            <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/home_icon"
+                    android:tint="@color/colorPrimary"
+                    android:layout_marginStart="5dp"
+
+            />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notification"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="35sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/notification"
+            />
+
+        </LinearLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+        >
+            <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/home_icon"
+                    android:tint="@color/colorPrimary"
+                    android:layout_marginStart="5dp"
+
+            />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Invite Friends"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="35sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/invite_friends"
+            />
+
+        </LinearLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+        >
+            <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/home_icon"
+                    android:tint="@color/colorPrimary"
+                    android:layout_marginStart="5dp"
+
+            />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Ignite StartupX"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="35sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/contact_ignite_startupX"
+            />
+
+        </LinearLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+        >
+            <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/home_icon"
+                    android:tint="@color/colorPrimary"
+                    android:layout_marginStart="5dp"
+
+            />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change Password"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="35sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/change_password"
+            />
+
+        </LinearLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+        >
+            <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/home_icon"
+                    android:tint="@color/colorPrimary"
+                    android:layout_marginStart="5dp"
+
+            />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="35sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/logout"
+            />
+
+        </LinearLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+        >
+            <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/home_icon"
+                    android:tint="@color/colorPrimary"
+                    android:layout_marginStart="5dp"
+
+            />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete Account"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="35sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/delete"
+            />
+
+        </LinearLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+        />
+    </LinearLayout>
+
+</RelativeLayout>
