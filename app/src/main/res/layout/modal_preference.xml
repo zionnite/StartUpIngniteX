@@ -26,6 +26,15 @@
             <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="Student / Internship"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginBottom="2dp"
+                    android:id="@+id/student"
+            />
+            <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="Aspiring Entrepreneur"
                     android:textColor="@color/colorWhite"
                     android:background="@color/colorPrimary"

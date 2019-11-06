@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     Dialog prefDialog;
     LinearLayout community_btn,ask_for__help,business_listing_btn,event_btn,resource_btn,coworking_btn,knowledge_btn,webinars_btn,startJob_btn,surveys_btn,toolkit_btn,settings_btn,freelancing_btn,intenship_btn,grant_btn;
-    AppCompatButton already_bussiness_btn,service_provider_btn, entrepreneur_btn,government_agency_btn,investor_btn,accelerator_btn;
+    AppCompatButton already_bussiness_btn,service_provider_btn, entrepreneur_btn,government_agency_btn,investor_btn,accelerator_btn,student_btn;
 
 
     MyProgressDialog myProgressDialog;
@@ -203,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
 
             popUpDialogPreference();
         }
-        //popUpDialogPreference();
+        popUpDialogPreference();
     }
 
     public void popUpDialogPreference(){
@@ -219,6 +219,7 @@ public class MainActivity extends AppCompatActivity {
         government_agency_btn           = prefDialog.findViewById(R.id.government_agency);
         investor_btn                    = prefDialog.findViewById(R.id.investor);
         accelerator_btn                 = prefDialog.findViewById(R.id.accelerator);
+        student_btn                 = prefDialog.findViewById(R.id.student);
 
         already_bussiness_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -267,6 +268,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Accelerator.class);
+                startActivity(intent);
+
+            }
+        });
+
+        student_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, InternActivity.class);
                 startActivity(intent);
 
             }
