@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -37,6 +38,7 @@ public class InternshipAdapter extends RecyclerView.Adapter<InternshipAdapter.My
     @Override
     public void onBindViewHolder(@NonNull InternshipAdapter.MyViewHolder holder, int position) {
 
+        InternshipModel model   = internshipModelList.get(position);
         holder.full_name.setText(internshipModelList.get(position).getFull_name());
         holder.user_name.setText(internshipModelList.get(position).getUser_name());
         RequestOptions options = new RequestOptions()
@@ -45,6 +47,15 @@ public class InternshipAdapter extends RecyclerView.Adapter<InternshipAdapter.My
                 .error(R.drawable.start_up_logo);
 
         Glide.with(context).load(internshipModelList.get(position).getUser_img()).apply(options).into(holder.user_image);
+
+        holder.view_detail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                internshipItemClickListener.onClick(model);
+            }
+        });
+
+
 
     }
 
@@ -57,12 +68,14 @@ public class InternshipAdapter extends RecyclerView.Adapter<InternshipAdapter.My
         CircleImageView user_image;
         TextView user_name;
         TextView full_name;
+        AppCompatButton view_detail;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             user_image  = itemView.findViewById(R.id.user_image);
             user_name  = itemView.findViewById(R.id.user_name);
             full_name  = itemView.findViewById(R.id.full_name);
+            view_detail  = itemView.findViewById(R.id.view_detail);
         }
     }
 }
