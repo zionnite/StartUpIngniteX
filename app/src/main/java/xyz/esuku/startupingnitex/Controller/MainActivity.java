@@ -185,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
         intenship_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, IntenshipActivity.class);
+                Intent intent = new Intent(MainActivity.this, InternshipActivity.class);
                 startActivity(intent);
             }
         });

@@ -184,7 +184,7 @@ public class InternActivity extends AppCompatActivity {
     private void update_profile_setting(String interest, String email, String phone, String full_name, String city, String mentor) {
         myProgressDialog.setMessage("Updating, wait ...");
 
-        String requestUrl = appLinks.update_aspiring_profile;
+        String requestUrl = appLinks.update_interns;
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, requestUrl, new Response.Listener<String>() {
             @Override

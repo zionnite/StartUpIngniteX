@@ -13,8 +13,7 @@ public class InternshipModel {
     String city;
 
 
-    public InternshipModel(String id, String user_id, String user_name, String full_name, String phone_no, String email, String user_img, String interest, String need_mentor, String city) {
-        this.id = id;
+    public InternshipModel(String user_id, String user_name, String full_name, String phone_no, String email, String user_img, String interest, String need_mentor, String city) {
         this.user_id = user_id;
         this.user_name = user_name;
         this.full_name = full_name;
@@ -24,14 +23,6 @@ public class InternshipModel {
         this.interest = interest;
         this.need_mentor = need_mentor;
         this.city = city;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getUser_id() {

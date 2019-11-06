@@ -62,7 +62,7 @@
         </activity>
         <activity android:name=".Controller.CommunityGroupActivity">
         </activity>
-        <activity android:name=".Controller.IntenshipActivity">
+        <activity android:name=".Controller.InternshipActivity">
         </activity>
         <activity android:name=".Controller.FreelanceActivity">
         </activity>
