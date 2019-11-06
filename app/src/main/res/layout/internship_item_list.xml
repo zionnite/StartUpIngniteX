@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_marginBottom="1dp"
+>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="2dp"
+            android:backgroundTint="@color/colorWhite"
+
+    >
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+        >
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_image"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/user_profile"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/colorPrimary"
+                    android:paddingTop="15dp"
+
+            />
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/user_image"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginStart="5dp"
+            >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/user_name"
+                        android:textStyle="normal"
+                        android:text="Username"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/full_name"
+                        android:textStyle="bold"
+                        android:text="Full name"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp"
+                        android:layout_marginTop="3dp"
+                />
+                <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Detail"
+                        android:background="@drawable/round_white_primary_background"
+                        android:textColor="@color/colorWhite"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:id="@+id/view_detail"
+
+                />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
