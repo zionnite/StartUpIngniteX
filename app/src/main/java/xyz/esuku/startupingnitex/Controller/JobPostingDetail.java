@@ -186,6 +186,11 @@ public class JobPostingDetail extends AppCompatActivity {
                         alertDialg.show();
                     }else if(status.equals("success")){
 
+                        String job_status       = result.getString("job_status");
+                        if(job_status.equals("true")){
+                            apply_btn.setBackgroundResource(R.color.colorGray);
+                        }
+
                         final AlertDialog.Builder alertDialg  = new AlertDialog.Builder(JobPostingDetail.this);
                         alertDialg.setTitle("Congratulation!");
                         alertDialg.setMessage(msg);
@@ -259,7 +264,12 @@ public class JobPostingDetail extends AppCompatActivity {
         String job_exp    = getIntent().getExtras().getString("job_exp");
         String job_remote    = getIntent().getExtras().getString("job_remote");
         String job_location    = getIntent().getExtras().getString("job_location");
+        String job_status    = getIntent().getExtras().getString("job_status");
 
+        if(job_status.equals("true")){
+            apply_btn.setBackgroundResource(R.color.colorGray);
+            apply_btn.setEnabled(false);
+        }
 
         title.setText(job_title);
         company_name.setText(job_comp);

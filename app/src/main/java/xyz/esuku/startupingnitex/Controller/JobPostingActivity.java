@@ -30,6 +30,7 @@ import xyz.esuku.startupingnitex.ItemClicked.JopPostingItemClickListener;
 import xyz.esuku.startupingnitex.Model.JopPostingModel;
 import xyz.esuku.startupingnitex.MyApplication;
 import xyz.esuku.startupingnitex.R;
+import xyz.esuku.startupingnitex.SQL_DB.UserDb_Helper;
 import xyz.esuku.startupingnitex.Util.AppLinks;
 import xyz.esuku.startupingnitex.Util.MyProgressDialog;
 
@@ -51,12 +52,18 @@ public class JobPostingActivity extends AppCompatActivity implements JopPostingI
     AppLinks appLinks = new AppLinks();
     Boolean searching = false;
 
+    private UserDb_Helper userDb_helper;
+    String user_name;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_job);
         myProgressDialog    = new MyProgressDialog(JobPostingActivity.this);
 
+        userDb_helper   = new UserDb_Helper(JobPostingActivity.this);
+        HashMap<String, String> user = userDb_helper.getUserDetails();
+        user_name    = user.get("user_name");
         job_recyclerView        = findViewById(R.id.jopPosting_Recyclerview);
 
 
@@ -130,6 +137,7 @@ public class JobPostingActivity extends AppCompatActivity implements JopPostingI
 
         Map<String, String> postMap = new HashMap<>();
         postMap.put("search_term", search_term);
+        postMap.put("user_name", user_name);
         myProgressDialog.setMessage("Searching ...");
 
         JsonObjectRequest req = new JsonObjectRequest(requestUrl, new JSONObject(postMap),
@@ -159,9 +167,10 @@ public class JobPostingActivity extends AppCompatActivity implements JopPostingI
                             String job_compensation     = detailObj.getString("job_compensation");
                             String job_time     = detailObj.getString("time");
                             String job_date     = detailObj.getString("date");
+                            String job_status     = detailObj.getString("job_status");
 
                             listingModels.add(new JopPostingModel(job_id,job_poster,job_title,job_desc,job_company,job_location,job_remotely,job_category,job_experience,
-                                    job_compensation,job_time,job_date));
+                                    job_compensation,job_time,job_date,job_status));
                         }
 
 
@@ -206,7 +215,7 @@ public class JobPostingActivity extends AppCompatActivity implements JopPostingI
         }
 
         myProgressDialog.setMessage("Please wait ...");
-        String requestUrl = appLinks.get_jop_listing;
+        String requestUrl = appLinks.get_jop_listing+"/"+user_name;
         JsonArrayRequest request = new JsonArrayRequest(requestUrl,
                 new Response.Listener<JSONArray>() {
                     @Override
@@ -263,6 +272,7 @@ public class JobPostingActivity extends AppCompatActivity implements JopPostingI
         intent.putExtra("job_exp",model.getJob_experience());
         intent.putExtra("job_remote",model.getJob_remote());
         intent.putExtra("job_location",model.getJob_location());
+        intent.putExtra("job_status",model.getJob_status());
         startActivity(intent);
     }
 }

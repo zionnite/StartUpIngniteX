@@ -36,10 +36,13 @@ public class JobPostingAdapter extends RecyclerView.Adapter<JobPostingAdapter.My
     public void onBindViewHolder(@NonNull JobPostingAdapter.MyViewHolder holder, int position) {
 
         JopPostingModel model   = jopPostingModelList.get(position);
-
+        String job_status   =model.getJob_status();
         holder.jop_posting_title.setText(jopPostingModelList.get(position).getJob_title());
         holder.jop_posting_desc.setText(jopPostingModelList.get(position).getJob_desc());
 
+        if(job_status.equals("true")){
+            holder.apply_btn.setBackgroundResource(R.color.colorGray);
+        }
         holder.apply_btn.setOnClickListener(v -> jopPostingItemClickListener.onClick(model));
     }
 
