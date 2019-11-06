@@ -1,7 +1,10 @@
 package xyz.esuku.startupingnitex.Controller;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -20,8 +23,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import de.hdodenhof.circleimageview.CircleImageView;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -56,6 +62,7 @@ public class InternshipActivity extends AppCompatActivity implements InternshipI
     private UserDb_Helper userDb_helper;
     String user_name;
 
+    Dialog prefDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -150,7 +157,7 @@ public class InternshipActivity extends AppCompatActivity implements InternshipI
                             String user_id        = detailObj.getString("user_id");
                             String user_name        = detailObj.getString("user_name");
                             String full_name     = detailObj.getString("full_name");
-                            String phone_no     = detailObj.getString("phone_no");
+                            String phone_no     = detailObj.getString("phone");
                             String email     = detailObj.getString("email");
                             String user_img     = detailObj.getString("user_img");
                             String interest     = detailObj.getString("interest");
@@ -246,6 +253,46 @@ public class InternshipActivity extends AppCompatActivity implements InternshipI
     }
     @Override
     public void onClick(InternshipModel model) {
+
+        String d_user_id      = model.getUser_id();
+        String d_user_name      = model.getUser_name();
+        String d_full_name      = model.getFull_name();
+        String d_phone          = model.getPhone_no();
+        String d_email          = model.getEmail();
+        String d_interest       = model.getInterest();
+        String d_need_mentor    = model.getNeed_mentor();
+        String d_city           = model.getCity();
+        String d_user_image     = model.getUser_img();
+
+
+        prefDialog  = new Dialog(InternshipActivity.this);
+        prefDialog.setContentView(R.layout.modal_view_interns_details);
+        prefDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        prefDialog.setCancelable(true);
+        prefDialog.show();
+
+        TextView t_user_name      = prefDialog.findViewById(R.id.user_name);
+        TextView t_full_name      = prefDialog.findViewById(R.id.full_name);
+        TextView t_city           = prefDialog.findViewById(R.id.city);
+        TextView t_interest       = prefDialog.findViewById(R.id.interest);
+        TextView t_email          = prefDialog.findViewById(R.id.email);
+        TextView t_phone          = prefDialog.findViewById(R.id.phone);
+        CircleImageView t_user_image          = prefDialog.findViewById(R.id.user_image);
+
+
+        RequestOptions options = new RequestOptions()
+                .centerCrop()
+                .placeholder(R.drawable.start_up_logo)
+                .error(R.drawable.start_up_logo);
+
+        Glide.with(getApplicationContext()).load(d_user_image).apply(options).into(t_user_image);
+        t_user_name.setText(d_user_name);
+        t_full_name.setText(d_full_name);
+        t_city.setText(d_city);
+        t_phone.setText(d_phone);
+        t_email.setText(d_email);
+        t_interest.setText(d_interest);
+
 
     }
 }
