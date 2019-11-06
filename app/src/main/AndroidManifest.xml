@@ -25,6 +25,8 @@
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true"
             tools:replace="android:appComponentFactory">
+        <activity android:name=".Controller.UsersCategoryForm.InternActivity">
+        </activity>
         <activity android:name=".Controller.JobPostingDetail">
         </activity>
         <activity android:name=".Controller.JobPostingAddJop">

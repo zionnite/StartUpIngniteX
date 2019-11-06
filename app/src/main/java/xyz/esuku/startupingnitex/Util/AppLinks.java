@@ -68,4 +68,9 @@ public class AppLinks {
     public String submit_job     = BASE_URL+"submit_job";
     public String apply_job     = BASE_URL+"apply_job";
 
+
+    public String update_interns     = BASE_URL+"update_interns";
+    public String get_interns     = BASE_URL+"get_interns";
+    public String post_interns_search     = BASE_URL+"post_interns_search";
+
 }
