@@ -82,4 +82,7 @@ public class AppLinks {
     public String update_event_notification_setting     = BASE_URL+"update_event_notification_setting";
     public String update_msg_notification_setting     = BASE_URL+"update_msg_notification_setting";
 
+    public String contact_us     = BASE_URL+"contact_us";
+    public String change_password     = BASE_URL+"change_password";
+
 }

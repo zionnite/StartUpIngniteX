@@ -81,5 +81,9 @@ dependencies {
     implementation 'com.riyagayasen.android:easyaccordion:1.0.3'
 
 
+
+    implementation 'com.github.robertsimoes:Shareable:0.1.0'
+
+
 }
 apply plugin: 'com.google.gms.google-services'

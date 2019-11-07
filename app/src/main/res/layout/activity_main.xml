@@ -101,7 +101,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="20dp"
                     android:id="@+id/ask_for__help"
             >
                 <ImageView
@@ -127,7 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="20dp"
                     android:id="@+id/business_listing_btn"
             >
                 <ImageView
@@ -227,7 +227,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="20dp"
                     android:id="@+id/coworking_btn"
 
             >
@@ -275,66 +275,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:id="@+id/knowledge_btn"
-            >
-                <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/baseline_menu_book_black_18dp"
-                        android:background="@drawable/menu_border"
-                        android:scaleType="center"
-                        android:tint="@color/colorPrimary"
-
-                />
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Knowledge"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorBlack"
-                        android:layout_gravity="center_horizontal"
-                />
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="center"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorBlack"
-                        android:layout_gravity="center_horizontal"
-                />
-            </LinearLayout>
-
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:id="@+id/webinars_btn"
-                    android:layout_marginStart="30dp"
-            >
-                <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/baseline_play_circle_filled_black_18dp"
-                        android:background="@drawable/menu_border"
-                        android:tint="@color/colorPrimary"
-                        android:scaleType="center"
-
-                />
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Webinars"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorBlack"
-                        android:layout_gravity="center_horizontal"
-                />
-            </LinearLayout>
-
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginStart="30dp"
                     android:id="@+id/startJob_btn"
 
             >
@@ -356,6 +296,57 @@
                         android:layout_gravity="center_horizontal"
                 />
             </LinearLayout>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/intenship_btn"
+                    android:layout_marginStart="20dp"
+            >
+                <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/baseline_supervisor_account_black_18dp"
+                        android:background="@drawable/menu_border"
+                        android:tint="@color/colorPrimary"
+                        android:scaleType="center"
+
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Intership"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        android:layout_gravity="center_horizontal"
+                />
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/settings_btn"
+
+            >
+                <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/baseline_settings_applications_black_18dp"
+                        android:background="@drawable/menu_border"
+                        android:scaleType="center"
+                        android:tint="@color/colorPrimary"
+
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Settings"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        android:layout_gravity="center_horizontal"
+                />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -368,6 +359,7 @@
                 android:gravity="center_horizontal"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="25dp"
+                android:visibility="gone"
         >
 
             <LinearLayout
@@ -408,7 +400,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:id="@+id/toolkit_btn"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="20dp"
             >
                 <ImageView
                         android:layout_width="80dp"
@@ -434,7 +426,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:id="@+id/resource_btn"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="20dp"
             >
                 <ImageView
                         android:layout_width="80dp"
@@ -475,13 +467,72 @@
                 android:gravity="center_horizontal"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="25dp"
+                android:visibility="gone"
         >
 
             <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:id="@+id/knowledge_btn"
+            >
+                <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/baseline_menu_book_black_18dp"
+                        android:background="@drawable/menu_border"
+                        android:scaleType="center"
+                        android:tint="@color/colorPrimary"
+
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Knowledge"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        android:layout_gravity="center_horizontal"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        android:layout_gravity="center_horizontal"
+                />
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/webinars_btn"
+                    android:layout_marginStart="20dp"
+            >
+                <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/baseline_play_circle_filled_black_18dp"
+                        android:background="@drawable/menu_border"
+                        android:tint="@color/colorPrimary"
+                        android:scaleType="center"
+
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Webinars"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        android:layout_gravity="center_horizontal"
+                />
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:id="@+id/freelancing_btn"
+                    android:layout_marginStart="20dp"
             >
                 <ImageView
                         android:layout_width="80dp"
@@ -510,58 +561,10 @@
                 />
             </LinearLayout>
 
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:id="@+id/intenship_btn"
-                    android:layout_marginLeft="20dp"
-            >
-                <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/baseline_supervisor_account_black_18dp"
-                        android:background="@drawable/menu_border"
-                        android:tint="@color/colorPrimary"
-                        android:scaleType="center"
 
-                />
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Intership"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorBlack"
-                        android:layout_gravity="center_horizontal"
-                />
-            </LinearLayout>
 
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginStart="30dp"
-                    android:id="@+id/settings_btn"
 
-            >
-                <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/baseline_settings_applications_black_18dp"
-                        android:background="@drawable/menu_border"
-                        android:scaleType="center"
-                        android:tint="@color/colorPrimary"
 
-                />
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Settings"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorBlack"
-                        android:layout_gravity="center_horizontal"
-                />
-            </LinearLayout>
 
         </LinearLayout>
     </RelativeLayout>

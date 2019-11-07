@@ -50,6 +50,7 @@
             android:orientation="vertical"
             android:layout_below="@+id/toobar_LinearLayout"
             android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
     >
 
         <LinearLayout
@@ -60,7 +61,7 @@
             <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/home_icon"
+                    android:src="@drawable/s_notification"
                     android:tint="@color/colorPrimary"
                     android:layout_marginStart="5dp"
 
@@ -71,7 +72,7 @@
                     android:text="Notification"
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
-                    android:textSize="25sp"
+                    android:textSize="19sp"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
                     android:id="@+id/notification"
@@ -93,7 +94,7 @@
             <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/home_icon"
+                    android:src="@drawable/share"
                     android:tint="@color/colorPrimary"
                     android:layout_marginStart="5dp"
 
@@ -104,7 +105,7 @@
                     android:text="Invite Friends"
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
-                    android:textSize="25sp"
+                    android:textSize="19sp"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
                     android:id="@+id/invite_friends"
@@ -126,8 +127,7 @@
             <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/home_icon"
-                    android:tint="@color/colorPrimary"
+                    android:src="@drawable/start_up_logo"
                     android:layout_marginStart="5dp"
 
             />
@@ -137,7 +137,7 @@
                     android:text="Contact Ignite StartupX"
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
-                    android:textSize="25sp"
+                    android:textSize="19sp"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
                     android:id="@+id/contact_ignite_startupX"
@@ -159,7 +159,7 @@
             <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/home_icon"
+                    android:src="@drawable/password_key"
                     android:tint="@color/colorPrimary"
                     android:layout_marginStart="5dp"
 
@@ -170,7 +170,7 @@
                     android:text="Change Password"
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
-                    android:textSize="25sp"
+                    android:textSize="19sp"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
                     android:id="@+id/change_password"
@@ -192,7 +192,7 @@
             <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/home_icon"
+                    android:src="@drawable/logout"
                     android:tint="@color/colorPrimary"
                     android:layout_marginStart="5dp"
 
@@ -203,7 +203,7 @@
                     android:text="Logout"
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
-                    android:textSize="25sp"
+                    android:textSize="19sp"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
                     android:id="@+id/logout"
@@ -225,7 +225,7 @@
             <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/home_icon"
+                    android:src="@drawable/delete"
                     android:tint="@color/colorPrimary"
                     android:layout_marginStart="5dp"
 
@@ -236,7 +236,7 @@
                     android:text="Delete Account"
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
-                    android:textSize="25sp"
+                    android:textSize="19sp"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
                     android:id="@+id/delete"
