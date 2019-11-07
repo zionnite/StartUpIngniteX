@@ -122,20 +122,22 @@
                             android:textStyle="normal"
                             android:textColor="@color/colorBlack"
                             android:layout_marginStart="5dp"
-                            android:layout_marginTop="4dp"
+                            android:layout_marginTop="9dp"
                     />
 
                 </LinearLayout>
 
 
-                <androidx.appcompat.widget.AppCompatToggleButton
+
+                <androidx.appcompat.widget.SwitchCompat
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:textColor="@color/colorWhite"
                         android:id="@+id/post_btn"
-                />
+                        android:layout_margin="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:text="Switch OFF/ON"
+                        app:theme="@style/SwitchTheme"
+                        android:checked="true"/>
             </RelativeLayout>
 
         </LinearLayout>
@@ -195,14 +197,18 @@
                 </LinearLayout>
 
 
-                <androidx.appcompat.widget.AppCompatToggleButton
+
+
+                <androidx.appcompat.widget.SwitchCompat
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:textColor="@color/colorWhite"
                         android:id="@+id/tagging_btn"
-                />
+                        android:layout_margin="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:text="Switch OFF/ON"
+                        app:theme="@style/SwitchTheme"
+                        android:checked="true"/>
+
             </RelativeLayout>
 
         </LinearLayout>
@@ -256,20 +262,24 @@
                             android:textStyle="normal"
                             android:textColor="@color/colorBlack"
                             android:layout_marginStart="5dp"
-                            android:layout_marginTop="4dp"
+                            android:layout_marginTop="9dp"
                     />
 
                 </LinearLayout>
 
 
-                <androidx.appcompat.widget.AppCompatToggleButton
+
+                <androidx.appcompat.widget.SwitchCompat
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:textColor="@color/colorWhite"
                         android:id="@+id/news_btn"
-                />
+                        android:layout_margin="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:text="Switch OFF/ON"
+                        app:theme="@style/SwitchTheme"
+                        android:checked="true"/>
+
+
             </RelativeLayout>
 
         </LinearLayout>
@@ -329,14 +339,16 @@
                 </LinearLayout>
 
 
-                <androidx.appcompat.widget.AppCompatToggleButton
+
+                <androidx.appcompat.widget.SwitchCompat
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:textColor="@color/colorWhite"
                         android:id="@+id/res_btn"
-                />
+                        android:layout_margin="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:text="Switch OFF/ON"
+                        app:theme="@style/SwitchTheme"
+                        android:checked="true"/>
             </RelativeLayout>
 
         </LinearLayout>
@@ -396,14 +408,16 @@
                 </LinearLayout>
 
 
-                <androidx.appcompat.widget.AppCompatToggleButton
+
+                <androidx.appcompat.widget.SwitchCompat
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:textColor="@color/colorWhite"
                         android:id="@+id/event_btn"
-                />
+                        android:layout_margin="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:text="Switch OFF/ON"
+                        app:theme="@style/SwitchTheme"
+                        android:checked="true"/>
             </RelativeLayout>
 
         </LinearLayout>
@@ -463,14 +477,17 @@
                 </LinearLayout>
 
 
-                <androidx.appcompat.widget.AppCompatToggleButton
+
+                <androidx.appcompat.widget.SwitchCompat
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:textColor="@color/colorWhite"
                         android:id="@+id/msg_btn"
-                />
+                        android:layout_margin="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:text="Switch OFF/ON"
+                        app:theme="@style/SwitchTheme"
+                        android:checked="true"/>
+
             </RelativeLayout>
 
         </LinearLayout>
