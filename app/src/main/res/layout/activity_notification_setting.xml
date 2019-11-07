@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,4 +7,472 @@
         android:layout_height="match_parent"
         tools:context=".Controller.Settings.Notification">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toobar_LinearLayout"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="10dp"
+
+    >
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/left_arrow_icon"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="0dp"
+                android:tint="@color/colorWhite"
+                android:id="@+id/back_btn"
+
+
+
+        />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Settings"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Notification Setting"
+                android:textColor="@color/colorWhite"
+                android:layout_toRightOf="@+id/back_btn"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+        />
+
+    </RelativeLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/toobar_LinearLayout"
+
+    >
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manage Notification Setting"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textAllCaps="true"
+                android:layout_marginStart="2dp"
+
+        />
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You can manage your notification setting by toggling switch beside each feature"
+                android:textColor="@color/colorBlack"
+                android:textStyle="normal"
+                android:textSize="15sp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="2dp"
+
+        />
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="5dp"
+        >
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/home_icon"
+                        android:tint="@color/colorPrimary"
+                        android:id="@+id/setting_post_icon"
+                />
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/setting_post_icon"
+                        android:orientation="vertical"
+                >
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="New Post"
+                            android:textAllCaps="true"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Be notified when a user posts in your community hub or replies to your comment"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="4dp"
+                    />
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatToggleButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/colorWhite"
+                        android:id="@+id/post_btn"
+                />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="5dp"
+        >
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/home_icon"
+                        android:tint="@color/colorPrimary"
+                        android:id="@+id/setting_news_icon"
+                />
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/setting_news_icon"
+                        android:orientation="vertical"
+                >
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tagging"
+                            android:textAllCaps="true"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Be notified when a user tags you in a post or comment"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="4dp"
+                    />
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatToggleButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/colorWhite"
+                        android:id="@+id/tagging_btn"
+                />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="5dp"
+        >
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/home_icon"
+                        android:tint="@color/colorPrimary"
+                        android:id="@+id/setting_tag_icon"
+                />
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/setting_tag_icon"
+                        android:orientation="vertical"
+                >
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Local News"
+                            android:textAllCaps="true"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Be notified when a content has been posted in your community's local news"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="4dp"
+                    />
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatToggleButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/colorWhite"
+                        android:id="@+id/news_btn"
+                />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="5dp"
+        >
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/home_icon"
+                        android:tint="@color/colorPrimary"
+                        android:id="@+id/setting_res_icon"
+                />
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/setting_res_icon"
+                        android:orientation="vertical"
+                >
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Resources"
+                            android:textAllCaps="true"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Be notified when resources have been added to your community"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="4dp"
+                    />
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatToggleButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/colorWhite"
+                        android:id="@+id/res_btn"
+                />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="5dp"
+        >
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/home_icon"
+                        android:tint="@color/colorPrimary"
+                        android:id="@+id/setting_event_icon"
+                />
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/setting_event_icon"
+                        android:orientation="vertical"
+                >
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Events"
+                            android:textAllCaps="true"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Be notified when events have been added to your community"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="4dp"
+                    />
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatToggleButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/colorWhite"
+                        android:id="@+id/event_btn"
+                />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="5dp"
+        >
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/home_icon"
+                        android:tint="@color/colorPrimary"
+                        android:id="@+id/setting_msg_icon"
+                />
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/setting_msg_icon"
+                        android:orientation="vertical"
+                >
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Direct Messages"
+                            android:textAllCaps="true"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Be notified when user sends you a direct message"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:textColor="@color/colorBlack"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="4dp"
+                    />
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatToggleButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/colorWhite"
+                        android:id="@+id/msg_btn"
+                />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

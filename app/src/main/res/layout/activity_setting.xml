@@ -8,10 +8,49 @@
         tools:context=".Controller.SettingActivity">
 
 
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toobar_LinearLayout"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="10dp"
+
+    >
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/left_arrow_icon"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="0dp"
+                android:tint="@color/colorWhite"
+                android:id="@+id/back_btn"
+
+
+
+        />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Settings"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Setting"
+                android:textColor="@color/colorWhite"
+                android:layout_toRightOf="@+id/back_btn"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+        />
+
+    </RelativeLayout>
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_below="@+id/toobar_LinearLayout"
+            android:layout_marginTop="5dp"
+    >
 
         <LinearLayout
                 android:layout_width="match_parent"
@@ -19,8 +58,8 @@
                 android:orientation="horizontal"
         >
             <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/home_icon"
                     android:tint="@color/colorPrimary"
                     android:layout_marginStart="5dp"
@@ -32,7 +71,7 @@
                     android:text="Notification"
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
-                    android:textSize="35sp"
+                    android:textSize="25sp"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
                     android:id="@+id/notification"
@@ -52,8 +91,8 @@
                 android:layout_marginTop="10dp"
         >
             <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/home_icon"
                     android:tint="@color/colorPrimary"
                     android:layout_marginStart="5dp"
@@ -65,7 +104,7 @@
                     android:text="Invite Friends"
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
-                    android:textSize="35sp"
+                    android:textSize="25sp"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
                     android:id="@+id/invite_friends"
@@ -85,8 +124,8 @@
                 android:layout_marginTop="10dp"
         >
             <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/home_icon"
                     android:tint="@color/colorPrimary"
                     android:layout_marginStart="5dp"
@@ -98,7 +137,7 @@
                     android:text="Contact Ignite StartupX"
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
-                    android:textSize="35sp"
+                    android:textSize="25sp"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
                     android:id="@+id/contact_ignite_startupX"
@@ -118,8 +157,8 @@
                 android:layout_marginTop="10dp"
         >
             <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/home_icon"
                     android:tint="@color/colorPrimary"
                     android:layout_marginStart="5dp"
@@ -131,7 +170,7 @@
                     android:text="Change Password"
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
-                    android:textSize="35sp"
+                    android:textSize="25sp"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
                     android:id="@+id/change_password"
@@ -151,8 +190,8 @@
                 android:layout_marginTop="10dp"
         >
             <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/home_icon"
                     android:tint="@color/colorPrimary"
                     android:layout_marginStart="5dp"
@@ -164,7 +203,7 @@
                     android:text="Logout"
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
-                    android:textSize="35sp"
+                    android:textSize="25sp"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
                     android:id="@+id/logout"
@@ -184,8 +223,8 @@
                 android:layout_marginTop="10dp"
         >
             <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/home_icon"
                     android:tint="@color/colorPrimary"
                     android:layout_marginStart="5dp"
@@ -197,18 +236,14 @@
                     android:text="Delete Account"
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
-                    android:textSize="35sp"
+                    android:textSize="25sp"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
                     android:id="@+id/delete"
             />
 
         </LinearLayout>
-        <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorPrimary"
-        />
+
     </LinearLayout>
 
 </RelativeLayout>
