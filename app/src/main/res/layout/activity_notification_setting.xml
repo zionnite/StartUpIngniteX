@@ -137,7 +137,8 @@
                         android:layout_alignParentEnd="true"
                         android:text="Switch OFF/ON"
                         app:theme="@style/SwitchTheme"
-                        android:checked="true"/>
+
+                />
             </RelativeLayout>
 
         </LinearLayout>
@@ -207,7 +208,8 @@
                         android:layout_alignParentEnd="true"
                         android:text="Switch OFF/ON"
                         app:theme="@style/SwitchTheme"
-                        android:checked="true"/>
+
+                />
 
             </RelativeLayout>
 
@@ -277,7 +279,8 @@
                         android:layout_alignParentEnd="true"
                         android:text="Switch OFF/ON"
                         app:theme="@style/SwitchTheme"
-                        android:checked="true"/>
+
+                />
 
 
             </RelativeLayout>
@@ -348,7 +351,8 @@
                         android:layout_alignParentEnd="true"
                         android:text="Switch OFF/ON"
                         app:theme="@style/SwitchTheme"
-                        android:checked="true"/>
+
+                />
             </RelativeLayout>
 
         </LinearLayout>
@@ -417,7 +421,8 @@
                         android:layout_alignParentEnd="true"
                         android:text="Switch OFF/ON"
                         app:theme="@style/SwitchTheme"
-                        android:checked="true"/>
+
+                />
             </RelativeLayout>
 
         </LinearLayout>
@@ -486,7 +491,8 @@
                         android:layout_alignParentEnd="true"
                         android:text="Switch OFF/ON"
                         app:theme="@style/SwitchTheme"
-                        android:checked="true"/>
+
+                />
 
             </RelativeLayout>
 

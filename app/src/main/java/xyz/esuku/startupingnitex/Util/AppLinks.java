@@ -73,4 +73,13 @@ public class AppLinks {
     public String get_interns     = BASE_URL+"get_interns";
     public String post_interns_search     = BASE_URL+"post_interns_search";
 
+
+    public String get_notification_setting     = BASE_URL+"get_notification_setting";
+    public String update_post_notification_setting     = BASE_URL+"update_post_notification_setting";
+    public String update_tag_notification_setting     = BASE_URL+"update_tag_notification_setting";
+    public String update_news_notification_setting     = BASE_URL+"update_news_notification_setting";
+    public String update_res_notification_setting     = BASE_URL+"update_res_notification_setting";
+    public String update_event_notification_setting     = BASE_URL+"update_event_notification_setting";
+    public String update_msg_notification_setting     = BASE_URL+"update_msg_notification_setting";
+
 }
