@@ -144,7 +144,7 @@ public class Notification extends AppCompatActivity {
                 String status   = result.getString("status");
                 String msg   = result.getString("msg");
                 if(status.equals("fail")){
-                    //Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_LONG).show();
                 }
                 else if(status.equals("success")){
                     String setting      = result.getString("setting");
@@ -192,7 +192,7 @@ public class Notification extends AppCompatActivity {
                 String status   = result.getString("status");
                 String msg   = result.getString("msg");
                 if(status.equals("fail")){
-//                    Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_LONG).show();
                 }
                 else if(status.equals("success")){
                     String setting      = result.getString("setting");
@@ -240,7 +240,7 @@ public class Notification extends AppCompatActivity {
                 String status   = result.getString("status");
                 String msg   = result.getString("msg");
                 if(status.equals("fail")){
-//                    Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_LONG).show();
                 }
                 else if(status.equals("success")){
                     String setting      = result.getString("setting");
@@ -288,7 +288,7 @@ public class Notification extends AppCompatActivity {
                 String status   = result.getString("status");
                 String msg   = result.getString("msg");
                 if(status.equals("fail")){
-//                    Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_LONG).show();
                 }
                 else if(status.equals("success")){
                     String setting      = result.getString("setting");
@@ -336,7 +336,7 @@ public class Notification extends AppCompatActivity {
                 String status   = result.getString("status");
                 String msg   = result.getString("msg");
                 if(status.equals("fail")){
-//                    Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_LONG).show();
                 }
                 else if(status.equals("success")){
                     String setting      = result.getString("setting");
@@ -384,7 +384,7 @@ public class Notification extends AppCompatActivity {
                 String status   = result.getString("status");
                 String msg   = result.getString("msg");
                 if(status.equals("fail")){
-//                    Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_LONG).show();
                 }
                 else if(status.equals("success")){
                     String setting      = result.getString("setting");
