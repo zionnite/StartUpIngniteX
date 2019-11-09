@@ -40,6 +40,7 @@ public class JobPostingDetail extends AppCompatActivity {
     private UserDb_Helper userDb_helper;
     String user_name;
     String job_id;
+    String job_poster;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -230,6 +231,7 @@ public class JobPostingDetail extends AppCompatActivity {
                 postMap.put("linkdin", linkedi);
                 postMap.put("website", website);
                 postMap.put("job_id", job_id);
+                postMap.put("job_poster", job_poster);
                 return postMap;
             }
         };
@@ -254,7 +256,7 @@ public class JobPostingDetail extends AppCompatActivity {
         category       = findViewById(R.id.category);
         description       = findViewById(R.id.description);
 
-        String job_poster    = getIntent().getExtras().getString("job_poster");
+        job_poster    = getIntent().getExtras().getString("job_poster");
         job_id    = getIntent().getExtras().getString("job_id");
         String job_title    = getIntent().getExtras().getString("job_title");
         String job_comp    = getIntent().getExtras().getString("job_comp");
