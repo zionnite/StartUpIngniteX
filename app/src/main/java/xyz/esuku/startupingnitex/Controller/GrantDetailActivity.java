@@ -176,7 +176,14 @@ public class GrantDetailActivity extends AppCompatActivity implements PickiTCall
 
         Glide.with(getApplicationContext()).load(grant_img).centerCrop().placeholder(R.drawable.start_up_logo).into(grant_image);
         grant_topic.setText(grant_name);
-        grant_content.setText(grant_desc);
+        grant_content.setText(stripHtml(grant_desc));
+    }
+    public String stripHtml(String html) {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            return Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY).toString();
+        } else {
+            return Html.fromHtml(html).toString();
+        }
     }
     private void hideNotificationBar(){
 

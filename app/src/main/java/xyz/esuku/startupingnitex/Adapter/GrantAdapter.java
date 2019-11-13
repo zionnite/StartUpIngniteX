@@ -1,6 +1,8 @@
 package xyz.esuku.startupingnitex.Adapter;
 
 import android.content.Context;
+import android.text.Html;
+import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,9 +42,12 @@ public class GrantAdapter extends RecyclerView.Adapter<GrantAdapter.MyViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull GrantAdapter.MyViewHolder holder, int position) {
+
+        String content       = grantModelList.get(position).getGrant_desc();
+        String grant_content        =stripHtml(content);
         GrantModel grantModel   = grantModelList.get(position);
         holder.grant_topic.setText(grantModelList.get(position).getGrant_name());
-        holder.grant_content.setText(grantModelList.get(position).getGrant_desc());
+        holder.grant_content.setText(grant_content);
         //Glide.with(context).load(grantModelList.get(position).getGrant_img()).centerCrop().placeholder(R.drawable.start_up_logo).into(holder.grant_image);
 
         RequestOptions options = new RequestOptions()
@@ -59,6 +64,13 @@ public class GrantAdapter extends RecyclerView.Adapter<GrantAdapter.MyViewHolder
 
     }
 
+    public String stripHtml(String html) {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            return Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY).toString();
+        } else {
+            return Html.fromHtml(html).toString();
+        }
+    }
     @Override
     public int getItemCount() {
         return grantModelList.size();
