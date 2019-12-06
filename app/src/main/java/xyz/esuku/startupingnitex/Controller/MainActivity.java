@@ -203,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
 
             popUpDialogPreference();
         }
-        //popUpDialogPreference();
+        popUpDialogPreference();
     }
 
     public void popUpDialogPreference(){
