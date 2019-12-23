@@ -46,6 +46,7 @@ import xyz.esuku.startupingnitex.Adapter.ForumAdapter;
 import xyz.esuku.startupingnitex.Adapter.ForumDetailAdapter;
 import xyz.esuku.startupingnitex.ItemClicked.ForumCheckListener;
 import xyz.esuku.startupingnitex.ItemClicked.ForumDetailCheckerListener;
+import xyz.esuku.startupingnitex.ItemClicked.ForumDetailItemListener;
 import xyz.esuku.startupingnitex.ItemClicked.ForumItemClickListener;
 import xyz.esuku.startupingnitex.Model.ForumDetailModel;
 import xyz.esuku.startupingnitex.Model.ForumModel;
@@ -63,7 +64,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ForumDetailActivity extends AppCompatActivity{
+public class ForumDetailActivity extends AppCompatActivity implements ForumDetailItemListener {
 
     CircleImageView ask_user_image;
     TextView ask_user_name,ask_user_city,ask_user_time,ask_content,ask_counter;
@@ -167,7 +168,7 @@ public class ForumDetailActivity extends AppCompatActivity{
 
         //forumDetailModelList.add(new ForumDetailModel(1,"user_image","zionnite","Benin City","5mins Ago","content goes here","1",true));
 
-        forumDetailAdapter = new ForumDetailAdapter(getApplicationContext(), forumDetailModelList);
+        forumDetailAdapter = new ForumDetailAdapter(getApplicationContext(), forumDetailModelList, this);
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         forum_detailRecyclerView.setHasFixedSize(true);
         forum_detailRecyclerView.setLayoutManager(linearLayoutManager);
@@ -700,4 +701,12 @@ public class ForumDetailActivity extends AppCompatActivity{
         return encodedImage;
     }
 
+    @Override
+    public void viewUser(String user_name) {
+        Log.e("ViewUser2","View User Fire");
+        Intent intent = new Intent(ForumDetailActivity.this, ViewUserProfile.class);
+        intent.putExtra("user_name",user_name);
+        intent.putExtra("back_action","ForumDetailActivity.class");
+        startActivity(intent);
+    }
 }

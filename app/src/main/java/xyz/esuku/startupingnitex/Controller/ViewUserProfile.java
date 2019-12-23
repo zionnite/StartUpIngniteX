@@ -140,10 +140,10 @@ public class ViewUserProfile extends AppCompatActivity {
                         String user_status            = basic_detail.getString("status");
                         String phone            = basic_detail.getString("phone");
                         String email            = basic_detail.getString("email");
-                        String address            = basic_detail.getString("address");
+                        //String address            = basic_detail.getString("address");
                         String city            = basic_detail.getString("city");
                         String state            = basic_detail.getString("state");
-                        String website            = basic_detail.getString("website");
+                        String website            = basic_detail.getString("website_url");
                         String service_status            = basic_detail.getString("service_status");
 
                         fullname_text.setText(full_name);
@@ -164,35 +164,35 @@ public class ViewUserProfile extends AppCompatActivity {
                             other_profile.setVisibility(View.VISIBLE);
                             other_profile_CardView.setVisibility(View.VISIBLE);
 
-                            JSONObject work_detail      = result.getJSONObject("work_detail");
-                            String bus_name             = work_detail.getString("bus_name");
-                            String bus_phone             = work_detail.getString("bus_phone");
-                            String bus_email             = work_detail.getString("bus_email");
-                            String bus_add             = work_detail.getString("bus_add");
-                            String bus_service             = work_detail.getString("bus_service");
-                            String bus_charges             = work_detail.getString("bus_charges");
-                            String bus_specialty             = work_detail.getString("bus_specialty");
-                            String expertise             = work_detail.getString("expertise");
-                            String interest             = work_detail.getString("interest");
-                            String weeks_to_start             = work_detail.getString("weeks_to_start");
-                            String previous_exp             = work_detail.getString("previous_exp");
-                            String name_of_person             = work_detail.getString("name_of_person");
-                            String department             = work_detail.getString("department");
+                            //JSONObject work_detail      = result.getJSONObject("work_detail");
+                            String bus_name             = basic_detail.getString("bus_name");
+//                            String bus_phone             = basic_detail.getString("phone");
+//                            String bus_email             = basic_detail.getString("email");
+                            String bus_add             = basic_detail.getString("bus_add");
+                            String bus_service             = basic_detail.getString("bus_service");
+                            String bus_charges             = basic_detail.getString("bus_charges");
+                            String bus_specialty             = basic_detail.getString("bus_specialty");
+                            String expertise             = basic_detail.getString("expertise");
+                            String interest             = basic_detail.getString("interest");
+                            String weeks_to_start             = basic_detail.getString("week_to_start");
+                            String previous_exp             = basic_detail.getString("previous_exp");
+                            String name_of_person             = basic_detail.getString("name_of_person");
+                            String department             = basic_detail.getString("department");
 
                             if(!bus_name.isEmpty()){
                                 busname_LinearLayout.setVisibility(View.VISIBLE);
                                 business_name_text.setText(bus_name);
                             }
 
-                            if(!bus_phone.isEmpty()){
-                                phone_LinearLayout.setVisibility(View.VISIBLE);
-                                business_phone_text.setText(bus_phone);
-                            }
-
-                            if(!bus_email.isEmpty()){
-                                email_LinearLayout.setVisibility(View.VISIBLE);
-                                business_email_text.setText(bus_email);
-                            }
+//                            if(!bus_phone.isEmpty()){
+//                                phone_LinearLayout.setVisibility(View.VISIBLE);
+//                                business_phone_text.setText(bus_phone);
+//                            }
+//
+//                            if(!bus_email.isEmpty()){
+//                                email_LinearLayout.setVisibility(View.VISIBLE);
+//                                business_email_text.setText(bus_email);
+//                            }
 
                             if(!bus_add.isEmpty()){
                                 buss_add_LinearLayout.setVisibility(View.VISIBLE);

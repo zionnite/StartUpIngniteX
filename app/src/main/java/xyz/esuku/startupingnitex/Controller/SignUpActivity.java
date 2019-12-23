@@ -236,7 +236,7 @@ public class SignUpActivity extends AppCompatActivity {
                 Map<String, String> postMap = new HashMap<>();
                 postMap.put("full_name", full_name);
                 postMap.put("email", email);
-                postMap.put("phone", email);
+                postMap.put("phone", phone_no);
                 postMap.put("user_name", user_name);
                 postMap.put("password", password);
                 return postMap;

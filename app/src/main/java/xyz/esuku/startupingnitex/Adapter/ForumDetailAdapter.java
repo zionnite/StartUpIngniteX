@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.mikhaellopez.circularimageview.CircularImageView;
 import de.hdodenhof.circleimageview.CircleImageView;
+import xyz.esuku.startupingnitex.ItemClicked.ForumDetailItemListener;
 import xyz.esuku.startupingnitex.Model.ForumDetailModel;
 import xyz.esuku.startupingnitex.R;
 
@@ -22,10 +23,12 @@ import java.util.List;
 public class ForumDetailAdapter extends RecyclerView.Adapter<ForumDetailAdapter.MyViewHolder> {
     Context context;
     List<ForumDetailModel> forumDetailModelList;
+    ForumDetailItemListener forumDetailItemListener;
 
-    public ForumDetailAdapter(Context context, List<ForumDetailModel> forumDetailModelList) {
+    public ForumDetailAdapter(Context context, List<ForumDetailModel> forumDetailModelList, ForumDetailItemListener forumDetailItemListener) {
         this.context = context;
         this.forumDetailModelList = forumDetailModelList;
+        this.forumDetailItemListener    = forumDetailItemListener;
     }
 
 
@@ -57,23 +60,19 @@ public class ForumDetailAdapter extends RecyclerView.Adapter<ForumDetailAdapter.
         else if(content_checker.equals("false")){
             //show image
             holder.ask_detail_content.setText(forumDetailModelList.get(position).getContent());
-
             holder.ask_detail_content_image.setVisibility(View.VISIBLE);
-            //Glide.with(context).load(forumDetailModelList.get(position).getA_content_img()).override(600, 200).centerCrop() .placeholder(R.drawable.start_up_logo).into(holder.ask_detail_content_image);
-
-//            Glide.with(context)
-//                    .load(forumDetailModelList.get(position).getA_content_img())
-//                    .apply(RequestOptions.placeholderOf(R.drawable.start_up_logo)
-//                            .error(R.drawable.start_up_logo)
-//                            .override(500,500))
-//                    .into(holder.ask_detail_content_image);
-
             RequestOptions options = new RequestOptions()
                     .centerCrop()
                     .placeholder(R.drawable.content_loader_placeholder)
                     .error(R.drawable.content_loader_placeholder);
-
             Glide.with(context).load(forumDetailModelList.get(position).getA_content_img()).apply(options).into(holder.ask_detail_content_image);
+
+
+            holder.ask_detail_user_image.setOnClickListener(v -> {
+
+
+                forumDetailItemListener.viewUser(forumDetailModelList.get(position).getUser_name());
+            });
 
         }
 

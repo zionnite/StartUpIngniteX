@@ -119,6 +119,7 @@ public class Forum extends AppCompatActivity implements ForumItemClickListener {
             @Override
             public void onClick(View v) {
                 getForumPost();
+                finish();
             }
         });
         getForumPost();
@@ -242,6 +243,7 @@ public class Forum extends AppCompatActivity implements ForumItemClickListener {
 
     @Override
     public void viewUser(String user_name) {
+        Log.e("ViewUser","View User Fire");
         Intent intent = new Intent(Forum.this, ViewUserProfile.class);
         intent.putExtra("user_name",user_name);
         intent.putExtra("back_action","Forum.class");
